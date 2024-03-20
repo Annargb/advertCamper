@@ -1,5 +1,11 @@
+import { Container } from '../../styles/container';
+
 const HomePage = () => {
-  return <div>Home</div>;
+  return (
+    <Container>
+      <div>Home</div>
+    </Container>
+  );
 };
 
 export default HomePage;

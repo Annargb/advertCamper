@@ -4,8 +4,9 @@ export const Header = () => {
   return (
     <HeaderContainer>
       <Navigation>
-        <StyledLink to="/first">First</StyledLink>
-        <StyledLink to="/second">Second</StyledLink>
+        <StyledLink to="/">Home</StyledLink>
+        <StyledLink to="/catalog">Catalog</StyledLink>
+        <StyledLink to="/favorites">Favorite</StyledLink>
       </Navigation>
     </HeaderContainer>
   );
