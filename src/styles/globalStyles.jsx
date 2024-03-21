@@ -76,10 +76,6 @@ h6 {
   padding: 0;
 }
 
-h2{
-  font-family: 'RobotoBold';
-}
-
 img {
   display: block;
   max-width: 100%;
