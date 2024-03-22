@@ -32,6 +32,10 @@ export const CamperTitle = styled.h2`
   font-size: 24px;
   line-height: 1.25;
   color: ${(p) => p.theme.colors.textTitleColor};
+  max-width: 340px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 `;
 
 export const CamperImg = styled.img`

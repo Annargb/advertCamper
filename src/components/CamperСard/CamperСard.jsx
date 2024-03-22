@@ -2,10 +2,22 @@ import * as c from './CamperСard.styled';
 // import icons from '../../images/icons.svg';
 import { useState } from 'react';
 import { CamperDetails } from '../CamperDetails/CamperDetails';
+import { CamperModal } from '../Modal/Modal';
 // import { useDispatch } from 'react-redux';
 
 export const CamperCard = ({ camper, onRemoveFavorite }) => {
   const [isFavorite, setIsFavorite] = useState(checkFavorite(camper));
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    document.body.style.overflow = '';
+  };
 
   const addToFavorites = (camper) => {
     const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
@@ -69,8 +81,15 @@ export const CamperCard = ({ camper, onRemoveFavorite }) => {
         </c.CamperSubtitleWrapper>
         <c.CamperDescription>{camper.description}</c.CamperDescription>
         <CamperDetails camper={camper} />
-        <c.ShowMoreButton type="button">Show more</c.ShowMoreButton>
+        <c.ShowMoreButton type="button" onClick={openModal}>
+          Show more
+        </c.ShowMoreButton>
       </div>
+      <CamperModal
+        isModalOpen={isModalOpen}
+        closeModal={closeModal}
+        camper={camper}
+      />
     </c.CardWrapper>
   );
 };

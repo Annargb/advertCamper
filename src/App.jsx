@@ -5,6 +5,7 @@ import { AppWrapper } from './App.styled';
 // import HomePage from './pages/HomePage/HomePage';
 // import CatalogPage from './pages/CatalogPage/CatalogPage';
 // import FavoritePage from './pages/FavoritePage/FavoritePage';
+// import { Rewiews } from './components/Rewiews/Rewiews';
 
 const HomePage = lazy(() => import('pages/HomePage/HomePage.jsx'));
 const CatalogPage = lazy(() => import('pages/CatalogPage/CatalogPage.jsx'));
@@ -16,7 +17,10 @@ function App() {
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<HomePage />} />
-          <Route path="/catalog" element={<CatalogPage />} />
+          <Route path="/catalog" element={<CatalogPage />}>
+            {/* <Route path="features/:camperId" element={<div>Features</div>} />
+            <Route path="reviews" element={<Rewiews />} /> */}
+          </Route>
           <Route path="/favorites" element={<FavoritePage />} />
           <Route path="*" element={<HomePage />} />
         </Route>

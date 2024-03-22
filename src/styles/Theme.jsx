@@ -9,6 +9,7 @@ export const theme = {
     yellowColor: '#ffc531',
     buttonBorderColor: 'rgba(71, 84, 103, 0.2)',
     bgDetailsColor: '#f2f4f7',
+    modalBgColor: 'rgba(17, 18, 19, 0.4)',
   },
 
   transition: 'cubic-bezier(0.175, 0.885, 0.32, 1.275)',

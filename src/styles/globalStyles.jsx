@@ -3,6 +3,7 @@ import 'modern-normalize';
 import InterRegular from '../fonts/Inter-Regular.ttf';
 import InterMedium from '../fonts/Inter-Medium.ttf';
 import InterSemiBold from '../fonts/Inter-SemiBold.ttf';
+import 'react-perfect-scrollbar/dist/css/styles.css';
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -78,7 +79,8 @@ h6 {
 
 img {
   display: block;
-  max-width: 100%;
+  /* max-width: 100%; */
+  width: 100%;
   height: auto;
 }
 
@@ -91,4 +93,35 @@ button {
     border: none;
 
   }
+
+.scrollbar-container {
+/* padding-right: 10px; */
+  }
+
+.ps--active-x > .ps__rail-x {
+  display: none; 
+}
+
+.ps__thumb-x {
+ display: none;
+}
+
+.ps__rail-y {
+  border-radius: 7px; 
+  /* width: 7px;  */
+  right: -6px;
+}
+
+.ps__thumb-y {
+  position: absolute;
+  width: 8px; 
+  background: #d9d9d9; 
+  /* height: 264px;  */
+    /* right: -16px; */
+}
+
+.ps__rail-y {
+  height: 264px; 
+
+}
 `;
