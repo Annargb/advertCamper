@@ -80,7 +80,7 @@ Error generating stack: `+i.message+`
   width: 100%;
   height: 100vh;
   background-color: ${e=>e.theme.colors.whiteColor};
-`,Bf=P.lazy(()=>ba(()=>import("./HomePage-00b88349.js"),["assets/HomePage-00b88349.js","assets/container-ccf0001f.js"])),q1=P.lazy(()=>ba(()=>import("./CatalogPage-a9d66cf1.js"),["assets/CatalogPage-a9d66cf1.js","assets/CamperСard-e7681dc5.js","assets/container-ccf0001f.js"])),J1=P.lazy(()=>ba(()=>import("./FavoritePage-54a7ad17.js"),["assets/FavoritePage-54a7ad17.js","assets/container-ccf0001f.js","assets/CamperСard-e7681dc5.js"]));function Z1(){return H.jsx(X1,{children:H.jsx(h0,{children:H.jsxs(jn,{path:"/",element:H.jsx(Y1,{}),children:[H.jsx(jn,{index:!0,element:H.jsx(Bf,{})}),H.jsx(jn,{path:"/catalog",element:H.jsx(q1,{})}),H.jsx(jn,{path:"/favorites",element:H.jsx(J1,{})}),H.jsx(jn,{path:"*",element:H.jsx(Bf,{})})]})})})}const ew={colors:{whiteColor:"#fff",cardBorder:"rgba(16, 24, 40, 0.2)",textTitleColor:"#101828",textColor:"#475467",redColor:"#e44848",hoverButtonColor:"#d84343",yellowColor:"#ffc531",buttonBorderColor:"rgba(71, 84, 103, 0.2)",bgDetailsColor:"#f2f4f7",modalBgColor:"rgba(17, 18, 19, 0.4)"},transition:"cubic-bezier(0.175, 0.885, 0.32, 1.275)"},tw="/advertCamper/assets/Inter-Regular-3127f0b8.ttf",nw="/advertCamper/assets/Inter-Medium-a645f554.ttf",rw="/advertCamper/assets/Inter-SemiBold-b0b540e6.ttf";const ow=b1`
+`,Bf=P.lazy(()=>ba(()=>import("./HomePage-553601c9.js"),["assets/HomePage-553601c9.js","assets/container-74f36d89.js"])),q1=P.lazy(()=>ba(()=>import("./CatalogPage-11b85ab8.js"),["assets/CatalogPage-11b85ab8.js","assets/CamperСard-9634c3d5.js","assets/container-74f36d89.js"])),J1=P.lazy(()=>ba(()=>import("./FavoritePage-7259b1ac.js"),["assets/FavoritePage-7259b1ac.js","assets/container-74f36d89.js","assets/CamperСard-9634c3d5.js"]));function Z1(){return H.jsx(X1,{children:H.jsx(h0,{children:H.jsxs(jn,{path:"/",element:H.jsx(Y1,{}),children:[H.jsx(jn,{index:!0,element:H.jsx(Bf,{})}),H.jsx(jn,{path:"/catalog",element:H.jsx(q1,{})}),H.jsx(jn,{path:"/favorites",element:H.jsx(J1,{})}),H.jsx(jn,{path:"*",element:H.jsx(Bf,{})})]})})})}const ew={colors:{whiteColor:"#fff",cardBorder:"rgba(16, 24, 40, 0.2)",textTitleColor:"#101828",textColor:"#475467",redColor:"#e44848",hoverButtonColor:"#d84343",yellowColor:"#ffc531",buttonBorderColor:"rgba(71, 84, 103, 0.2)",bgDetailsColor:"#f2f4f7",modalBgColor:"rgba(17, 18, 19, 0.4)",inputsColor:"#f7f7f7",inputsText:"rgba(16, 24, 40, 0.6)",featuresBorderColor:"rgba(16, 24, 40, 0.1)"},transition:"cubic-bezier(0.175, 0.885, 0.32, 1.275)"},tw="/advertCamper/assets/Inter-Regular-3127f0b8.ttf",nw="/advertCamper/assets/Inter-Medium-a645f554.ttf",rw="/advertCamper/assets/Inter-SemiBold-b0b540e6.ttf";const ow=b1`
 
 
     @font-face {
@@ -184,7 +184,8 @@ button {
 .ps__rail-y {
   border-radius: 7px; 
   /* width: 7px;  */
-  right: -6px;
+  /* right: -6px; */
+   right: -18px;
 }
 
 .ps__thumb-y {

@@ -1,4 +1,4 @@
-import{s as a,u as c,a as s,r as n,f as m,j as o,b as d}from"./index-d83b888e.js";import{C as p}from"./CamperСard-e7681dc5.js";import{C as h}from"./container-ccf0001f.js";const g=t=>t.catalog.catalogItems,u=t=>t.catalog.visibleItems,x=a.ul`
+import{s as a,u as c,a as s,r as n,f as m,j as o,b as d}from"./index-2512cd1b.js";import{C as p}from"./CamperСard-9634c3d5.js";import{C as h}from"./container-74f36d89.js";const g=t=>t.catalog.catalogItems,u=t=>t.catalog.visibleItems,x=a.ul`
   margin-bottom: 50px;
 `,C=a.button`
   border: 1px solid;
