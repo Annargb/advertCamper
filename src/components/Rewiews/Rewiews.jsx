@@ -6,7 +6,7 @@ export const Rewiews = ({ camper }) => {
     <div>
       <ul>
         {camper.reviews.map((review) => (
-          <li key={nanoid()}>
+          <c.ReviewItem key={nanoid()}>
             <c.NameWrapper>
               <c.ReviewerNameContainer>
                 <c.ReviewerNameLetter>
@@ -16,7 +16,7 @@ export const Rewiews = ({ camper }) => {
               <c.ReviewerName>{review.reviewer_name}</c.ReviewerName>
             </c.NameWrapper>
             <c.TextReviews>{review.comment}</c.TextReviews>
-          </li>
+          </c.ReviewItem>
         ))}
       </ul>
     </div>

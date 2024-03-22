@@ -109,7 +109,8 @@ button {
 .ps__rail-y {
   border-radius: 7px; 
   /* width: 7px;  */
-  right: -6px;
+  /* right: -6px; */
+   right: -18px;
 }
 
 .ps__thumb-y {

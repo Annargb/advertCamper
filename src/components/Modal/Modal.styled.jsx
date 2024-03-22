@@ -127,4 +127,25 @@ export const CamperModalDescription = styled.p`
 export const TabWrapper = styled.ul`
   display: flex;
   gap: 40px;
+  border-bottom: 1px solid;
+  border-color: ${(p) => p.theme.colors.cardBorder};
+  margin-bottom: 44px;
+`;
+
+export const BottomModalContainer = styled.div`
+  display: flex;
+  gap: 24px;
+`;
+
+export const TabButton = styled.button`
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: ${(p) => p.theme.colors.textTitleColor};
+  background: none;
+  padding: 0;
+  border: 0;
+  padding-bottom: 24px;
+  border-bottom: ${(p) => (p.$active ? '5px solid' : 'none')};
+  border-color: ${(p) => p.theme.colors.redColor};
 `;

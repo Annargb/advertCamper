@@ -1,5 +1,13 @@
 import styled from 'styled-components';
 
+export const ReviewItem = styled.li`
+  margin-bottom: 24px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+`;
+
 export const ReviewerNameContainer = styled.div`
   border-radius: 60px;
   width: 60px;
@@ -33,5 +41,7 @@ export const TextReviews = styled.p`
 
 export const NameWrapper = styled.div`
   display: flex;
+  align-items: center;
   gap: 16px;
+  margin-bottom: 16px;
 `;

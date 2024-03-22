@@ -1,10 +1,12 @@
+import { useState } from 'react';
 import Modal from 'react-modal';
-import { IoMdClose } from 'react-icons/io';
-import * as c from './Modal.styled';
 import PerfectScrollbar from 'react-perfect-scrollbar';
+import { IoMdClose } from 'react-icons/io';
 // import { NavLink } from 'react-router-dom';
 import { Rewiews } from '../Rewiews/Rewiews';
-import { useState } from 'react';
+import { BookForm } from '../BookForm/BookForm';
+import { Features } from '../Features/Features';
+import * as c from './Modal.styled';
 
 const customStyles = {
   overlay: {
@@ -17,8 +19,8 @@ const customStyles = {
     bottom: 'auto',
     width: '982px',
     height: '720px',
-    // overflow: 'auto',
-    overflow: 'hidden',
+    overflow: 'auto',
+    // overflow: 'hidden',
     padding: '40px',
     borderRadius: '20px',
     marginRight: '-50%',
@@ -73,6 +75,7 @@ export const CamperModal = ({ isModalOpen, closeModal, camper }) => {
               </c.SubtitleModalWrapper>
             </c.CamperSubtitleModalWrapper>
             <c.ModalPrice>{`₴${camper.price}`}</c.ModalPrice>
+
             <c.ModalImgWrapper>
               {camper.gallery.map((img, index) => (
                 <c.CamperModalImgItem key={index}>
@@ -86,18 +89,33 @@ export const CamperModal = ({ isModalOpen, closeModal, camper }) => {
             <c.TabWrapper>
               <li>
                 {/* <NavLink to={`features/${camper.id}`}>Features</NavLink> */}
-                <button type="button" onClick={() => changeTab('features')}>
+                <c.TabButton
+                  type="button"
+                  onClick={() => changeTab('features')}
+                  $active={activeTab === 'features'}
+                >
                   Features
-                </button>
+                </c.TabButton>
               </li>
               <li>
-                <button type="button" onClick={() => changeTab('reviews')}>
+                <c.TabButton
+                  type="button"
+                  onClick={() => changeTab('reviews')}
+                  $active={activeTab === 'reviews'}
+                >
                   Reviews
-                </button>
+                </c.TabButton>
                 {/* <NavLink to={`reviews/${camper.id}`}>Reviews</NavLink> */}
               </li>
             </c.TabWrapper>
-            {activeTab === 'reviews' ? <Rewiews camper={camper} /> : ''}
+            <c.BottomModalContainer>
+              {activeTab === 'reviews' ? (
+                <Rewiews camper={camper} />
+              ) : (
+                <Features camper={camper} />
+              )}
+              <BookForm close={closeModal} />
+            </c.BottomModalContainer>
           </div>
         </PerfectScrollbar>
       </Modal>

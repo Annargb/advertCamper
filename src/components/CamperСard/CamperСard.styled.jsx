@@ -139,7 +139,6 @@ export const LocationIcon = styled(CiLocationOn)`
 `;
 
 export const Location = styled.svg`
-  /* stroke: ${(p) => p.theme.colors.textTitleColor}; */
   fill: ${(p) => p.theme.colors.textTitleColor};
   width: 16px;
   height: 16px;
