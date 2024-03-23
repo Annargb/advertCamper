@@ -17,26 +17,30 @@ export const catalogSlice = createSlice({
     visibleItems: [],
     currentPage: 1,
     totalPages: 1,
-    // favorites: [],
+    favorites: [],
     isLoading: false,
     error: null,
   },
   reducers: {
     updateCurrentPage(state) {
+      state.currentPage += 1;
       if (state.currentPage < state.totalPages) {
         state.currentPage += 1;
         state.visibleItems = state.catalogItems.slice(0, state.currentPage * 4);
       }
     },
-    // addFavorites(state, action) {
-    //   state.favorites.push(action.payload);
-    // },
-    // removeFavorites(state, action) {
-    //   const newArr = state.favorites.filter(
-    //     (camper) => camper.id !== action.payload.id
-    //   );
-    //   state.favorites = newArr;
-    // },
+    updateFavorites(state, action) {
+      state.favorites = action.payload;
+    },
+    addFavorites(state, action) {
+      state.favorites.push(action.payload);
+    },
+
+    removeFavorites(state, action) {
+      state.favorites = state.favorites.filter(
+        (camper) => camper.id !== action.payload.id
+      );
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -53,5 +57,9 @@ export const catalogSlice = createSlice({
 });
 
 export const catalogReducer = catalogSlice.reducer;
-export const { addFavorites, removeFavorites, updateCurrentPage } =
-  catalogSlice.actions;
+export const {
+  addFavorites,
+  removeFavorites,
+  updateCurrentPage,
+  updateFavorites,
+} = catalogSlice.actions;

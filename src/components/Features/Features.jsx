@@ -8,6 +8,10 @@ import { TbRadio } from 'react-icons/tb';
 import { TbMicrowave } from 'react-icons/tb';
 import { LuShowerHead } from 'react-icons/lu';
 import { TbToiletPaper } from 'react-icons/tb';
+import { IoWaterOutline } from 'react-icons/io5';
+import { CgSmartHomeRefrigerator } from 'react-icons/cg';
+import { HiFire } from 'react-icons/hi';
+import { LuMicrowave } from 'react-icons/lu';
 import icons from '../../images/icons.svg';
 
 export const Features = ({ camper }) => {
@@ -80,6 +84,30 @@ export const Features = ({ camper }) => {
           <c.DetailsItems>
             <LuShowerHead style={{ width: '20', height: '20' }} />
             <c.DetailsText>Shower</c.DetailsText>
+          </c.DetailsItems>
+        )}
+        {camper.details.freezer !== 0 && (
+          <c.DetailsItems>
+            <CgSmartHomeRefrigerator style={{ width: '20', height: '20' }} />
+            <c.DetailsText>Freezer</c.DetailsText>
+          </c.DetailsItems>
+        )}
+        {camper.details.gas !== '' && (
+          <c.DetailsItems>
+            <HiFire style={{ width: '20', height: '20' }} />
+            <c.DetailsText>Gas</c.DetailsText>
+          </c.DetailsItems>
+        )}
+        {camper.details.water !== '' && (
+          <c.DetailsItems>
+            <IoWaterOutline style={{ width: '20', height: '20' }} />
+            <c.DetailsText>Water</c.DetailsText>
+          </c.DetailsItems>
+        )}
+        {camper.details.microwave !== 0 && (
+          <c.DetailsItems>
+            <LuMicrowave style={{ width: '20', height: '20' }} />
+            <c.DetailsText>Microwave</c.DetailsText>
           </c.DetailsItems>
         )}
       </c.DetailsList>

@@ -6,21 +6,26 @@ import { fetchCatalog } from '../../redux/operations';
 import {
   selectCatalogItems,
   selectVisibleItems,
-  // selectCurrentPage,
+  selectCurrentPage,
 } from '../../redux/selectors';
 import { updateCurrentPage } from '../../redux/slice';
 import * as c from './CatalogPage.styled';
 
 const CatalogPage = () => {
   const dispatch = useDispatch();
-  // let currentPage = useSelector(selectCurrentPage);
+  let currentPage = useSelector(selectCurrentPage);
   const catalogItems = useSelector(selectCatalogItems);
   const visibleItems = useSelector(selectVisibleItems);
   let isVisibleButton = visibleItems.length !== catalogItems.length;
 
+  // const handleClick = () => {
+  //   dispatch(updateCurrentPage());
+  //   dispatch(fetchCatalog(currentPage));
+  // };
+
   useEffect(() => {
-    dispatch(fetchCatalog());
-  }, [dispatch]);
+    dispatch(fetchCatalog(currentPage));
+  }, [dispatch, currentPage]);
 
   return (
     <Container>
@@ -31,6 +36,7 @@ const CatalogPage = () => {
             <CamperCard key={item.id} camper={item} />
           ))}
       </c.CamperList>
+
       {isVisibleButton && (
         <c.LoadMoreButton
           type="button"

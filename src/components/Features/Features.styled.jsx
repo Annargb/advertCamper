@@ -53,3 +53,8 @@ export const FeaturesDetailsItemText = styled.p`
   color: ${(p) => p.theme.colors.textTitleColor};
   text-transform: capitalize;
 `;
+
+export const IconWrapper = styled.span`
+  width: 20px;
+  height: 20px;
+`;
