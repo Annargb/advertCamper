@@ -1,29 +1,22 @@
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
-import { ToastContainer } from 'react-toastify';
 import { Header } from 'components/Header/Header';
+import { Toaster } from 'react-hot-toast';
+import { Container } from '../../styles/container';
 
 const SharedLayout = () => {
   return (
-    <>
+    <Container>
       <Header />
       <Suspense fallback={null}>
         <Outlet />
       </Suspense>
-      <ToastContainer
+      <Toaster
         position="top-right"
-        autoClose={5000}
-        hideProgressBar={true}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="dark"
-        style={{ zIndex: 99999 }}
+        gutter={14}
+        toastOptions={{ duration: 2000 }}
       />
-    </>
+    </Container>
   );
 };
 

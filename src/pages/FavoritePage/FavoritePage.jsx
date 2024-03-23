@@ -1,8 +1,7 @@
-import { Container } from '../../styles/container';
 import { CamperCard } from '../../components/CamperСard/CamperСard';
 import * as c from './FavoritePage.styled';
 import { useEffect } from 'react';
-import { updateFavorites } from '../../redux/slice';
+import { updateFavorites } from '../../redux/catalogSlice';
 import { selectFavorites } from '../../redux/selectors';
 import { useDispatch, useSelector } from 'react-redux';
 import van from '../../images/van1.webp';
@@ -19,7 +18,7 @@ const FavoritePage = () => {
   }, [dispatch]);
 
   return (
-    <Container>
+    <c.FavoritePageContainer>
       <c.FavoriteTitle>Favorite</c.FavoriteTitle>
       <c.CommonList>
         {!myFavorites.length ? (
@@ -36,7 +35,7 @@ const FavoritePage = () => {
           </ul>
         )}
       </c.CommonList>
-    </Container>
+    </c.FavoritePageContainer>
   );
 };
 

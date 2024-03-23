@@ -61,11 +61,6 @@ ol {
   margin: 0;
 }
 
-///
-li {
-  list-style: none; 
-}
-///
 
 h1,
 h2,
@@ -112,12 +107,8 @@ button {
   position: absolute;
   width: 8px; 
   background: #d9d9d9; 
-  /* height: 264px;  */
+  height: 264px; 
     /* right: -16px; */
 }
 
-.ps__rail-y {
-  height: 264px; 
-
-}
 `;

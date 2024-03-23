@@ -1,36 +1,7 @@
 import styled from 'styled-components';
 import { GoStarFill } from 'react-icons/go';
 import { CiLocationOn } from 'react-icons/ci';
-
-// export const CustomCamperModalContent = styled.div`
-//   / content {
-//     top: 50%;
-//     left: 50%;
-//     right: auto;
-//     bottom: auto;
-//     width: 982px;
-//     height: 720px;
-//     overflow: auto;
-//     padding: 40px;
-//     border-radius: 20px;
-//     margin-right: -50%;
-//     transform: translate(-50%, -50%);
-
-//     /* Стилізація скролбару */
-//     ::-webkit-scrollbar {
-//       width: 12px;
-//     }
-
-//     ::-webkit-scrollbar-thumb {
-//       background-color: #888;
-//       border-radius: 6px;
-//     }
-
-//     ::-webkit-scrollbar-thumb:hover {
-//       background-color: #555;
-//     }
-//   }
-// `;
+import { IoMdClose } from 'react-icons/io';
 
 export const CloseButton = styled.button`
   background: none;
@@ -103,12 +74,6 @@ export const ModalImgWrapper = styled.ul`
   margin-bottom: 24px;
 `;
 
-export const CamperModalImgItem = styled.li`
-  /* border-radius: 10px;
-  width: 290px;
-  height: 310px; */
-`;
-
 export const CamperModalImg = styled.img`
   border-radius: 10px;
   width: 290px;
@@ -148,4 +113,20 @@ export const TabButton = styled.button`
   padding-bottom: 24px;
   border-bottom: ${(p) => (p.$active ? '5px solid' : 'none')};
   border-color: ${(p) => p.theme.colors.redColor};
+`;
+
+export const OverflowContainer = styled.div`
+  height: 498px;
+`;
+
+export const CloseIcon = styled(IoMdClose)`
+  width: 32px;
+  height: 32px;
+  fill: ${(p) => p.theme.colors.textTitleColor};
+  transition: fill 250ms ${(p) => p.theme.transition};
+
+  &:hover,
+  &:focus {
+    fill: ${(p) => p.theme.colors.hoverButtonColor};
+  }
 `;

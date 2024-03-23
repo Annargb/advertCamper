@@ -24,22 +24,13 @@ export const catalogSlice = createSlice({
   reducers: {
     updateCurrentPage(state) {
       state.currentPage += 1;
-      if (state.currentPage < state.totalPages) {
-        state.currentPage += 1;
-        state.visibleItems = state.catalogItems.slice(0, state.currentPage * 4);
-      }
+      // if (state.currentPage < state.totalPages) {
+      //   state.currentPage += 1;
+      //   state.visibleItems = state.catalogItems.slice(0, state.currentPage * 4);
+      // }
     },
     updateFavorites(state, action) {
       state.favorites = action.payload;
-    },
-    addFavorites(state, action) {
-      state.favorites.push(action.payload);
-    },
-
-    removeFavorites(state, action) {
-      state.favorites = state.favorites.filter(
-        (camper) => camper.id !== action.payload.id
-      );
     },
   },
   extraReducers: (builder) => {
@@ -48,7 +39,8 @@ export const catalogSlice = createSlice({
       .addCase(fetchCatalog.fulfilled, (state, action) => {
         state.isLoading = false;
         state.error = null;
-        state.catalogItems = action.payload;
+        // state.catalogItems = action.payload;
+        state.catalogItems.push(...action.payload);
         state.totalPages = Math.ceil(state.catalogItems.length / 4);
         state.visibleItems = state.catalogItems.slice(0, state.currentPage * 4);
       })
@@ -57,9 +49,4 @@ export const catalogSlice = createSlice({
 });
 
 export const catalogReducer = catalogSlice.reducer;
-export const {
-  addFavorites,
-  removeFavorites,
-  updateCurrentPage,
-  updateFavorites,
-} = catalogSlice.actions;
+export const { updateCurrentPage, updateFavorites } = catalogSlice.actions;

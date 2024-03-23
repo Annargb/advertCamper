@@ -1,8 +1,4 @@
-import {
-  Form as FormikForm,
-  Field as FormikField,
-  ErrorMessage as FormikError,
-} from 'formik';
+import { Field as FormikField, ErrorMessage as FormikError } from 'formik';
 import styled from 'styled-components';
 
 export const BookFormWrapper = styled.div`
@@ -12,8 +8,7 @@ export const BookFormWrapper = styled.div`
   padding: 24px;
   width: 448px;
   min-height: 532px;
-  /* max-height: 612px; */
-  max-height: 594px;
+  max-height: 574px;
 `;
 
 export const FormTitle = styled.h3`
@@ -30,13 +25,6 @@ export const BookFormText = styled.p`
   font-size: 16px;
   line-height: 1.5;
   color: ${(p) => p.theme.colors.textColor};
-`;
-
-export const Form = styled(FormikForm)`
-  /* display: flex;
-  flex-direction: column;
-  gap: 14px;
-  max-width: 400px; */
 `;
 
 export const Field = styled(FormikField)`
@@ -69,8 +57,7 @@ export const FormGroup = styled.label`
 `;
 
 export const ErrorMessage = styled(FormikError)`
-  margin-top: 4px;
-  font-size: 14px;
+  font-size: 12px;
   color: ${(p) => p.theme.colors.redColor};
 `;
 

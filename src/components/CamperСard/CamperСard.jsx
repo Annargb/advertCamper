@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { CamperDetails } from '../CamperDetails/CamperDetails';
 import { CamperModal } from '../Modal/Modal';
 import { useDispatch } from 'react-redux';
-import { updateFavorites } from '../../redux/slice';
+import { updateFavorites } from '../../redux/catalogSlice';
 
 export const CamperCard = ({ camper }) => {
   const dispatch = useDispatch();

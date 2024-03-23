@@ -85,6 +85,7 @@ export const ShowMoreButton = styled.button`
   padding: 16px 40px;
   width: 166px;
   height: 56px;
+  outline: none;
   transition: background-color 250ms ${(p) => p.theme.transition};
 
   &:hover,

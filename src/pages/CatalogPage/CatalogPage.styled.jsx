@@ -1,7 +1,20 @@
 import styled from 'styled-components';
 
-export const CamperList = styled.ul`
-  margin-bottom: 50px;
+export const CatalogPageContainer = styled.div`
+  padding-bottom: 100px;
+`;
+
+export const CatalogWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  /* gap: 64px; */
+`;
+
+export const CamperListContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
 `;
 
 export const LoadMoreButton = styled.button`
@@ -16,7 +29,9 @@ export const LoadMoreButton = styled.button`
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: -0.01em;
+  outline: none;
   color: ${(p) => p.theme.colors.textTitleColor};
+
   transition: border-color 250ms ${(p) => p.theme.transition};
 
   &:hover,

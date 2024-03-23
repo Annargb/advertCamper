@@ -1,4 +1,4 @@
-import { Formik } from 'formik';
+import { Formik, Form } from 'formik';
 import * as c from './BookForm.styled';
 import * as Yup from 'yup';
 
@@ -44,7 +44,7 @@ export const BookForm = () => {
           window.location.reload();
         }}
       >
-        <c.Form>
+        <Form>
           <c.InputWrapper>
             <c.FormGroup>
               <c.Field name="name" type="text" placeholder="Name" />
@@ -77,7 +77,7 @@ export const BookForm = () => {
           </c.InputWrapper>
 
           <c.FormButton type="submit">Send</c.FormButton>
-        </c.Form>
+        </Form>
       </Formik>
     </c.BookFormWrapper>
   );
