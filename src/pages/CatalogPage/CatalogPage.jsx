@@ -21,6 +21,7 @@ const CatalogPage = () => {
   // const visibleItems = useSelector(selectVisibleItems);
   const isLoading = useSelector(selectCatalogIsLoading);
   // const isVisibleButton = visibleItems.length !== catalogItems.length;
+  const isVisibleButton = catalogItems.length % 4 === 0;
 
   // let filteredCampers = useSelector(selectFilteredCampers);
 
@@ -57,21 +58,14 @@ const CatalogPage = () => {
                 ))}
             </ul> */}
 
-            <c.LoadMoreButton
-              type="button"
-              onClick={() => dispatch(updateCurrentPage())}
-            >
-              Load more
-            </c.LoadMoreButton>
-
-            {/* {isVisibleButton && (
+            {isVisibleButton && (
               <c.LoadMoreButton
                 type="button"
                 onClick={() => dispatch(updateCurrentPage())}
               >
                 Load more
               </c.LoadMoreButton>
-            )} */}
+            )}
           </c.CamperListContainer>
         </c.CatalogWrapper>
       )}
