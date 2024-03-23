@@ -1,6 +1,6 @@
-import{u as o,h as p,j as e,a as l,b as h,s as g,r as u,f as $,c as b}from"./index-f666039e.js";import{C,s as y,a as k,b as v,c as j,d as w,e as L}from"./selectors-58a1670e.js";const T="#4fa94d",z={"aria-busy":!0,role:"progressbar"},F=o.div`
+import{u as o,h as d,j as e,a as l,b as p,s as g,r as $,f as u,c as b}from"./index-f4954f02.js";import{C,s as y,a as k,b as v,c as j,d as w}from"./selectors-5c44160f.js";const L="#4fa94d",T={"aria-busy":!0,role:"progressbar"},z=o.div`
   display: ${t=>t.$visible?"flex":"none"};
-`,I="http://www.w3.org/2000/svg",r=242.776657104492,M=1.6,B=p`
+`,F="http://www.w3.org/2000/svg",r=242.776657104492,M=1.6,I=d`
 12.5% {
   stroke-dasharray: ${r*.14}px, ${r}px;
   stroke-dashoffset: -${r*.11}px;
@@ -16,8 +16,8 @@ import{u as o,h as p,j as e,a as l,b as h,s as g,r as u,f as $,c as b}from"./ind
 `;o.path`
   stroke-dasharray: ${r*.01}px, ${r};
   stroke-dashoffset: 0;
-  animation: ${B} ${M}s linear infinite;
-`;const P=p`
+  animation: ${I} ${M}s linear infinite;
+`;const P=d`
 to {
    transform: rotate(360deg);
  }
@@ -71,27 +71,27 @@ to {
   &:nth-child(12n + 11) {
     stroke-opacity: 0.92;
   }
-`;const S=({wrapperStyle:t={},visible:s=!0,wrapperClass:i="",height:a=100,width:d=100,color:n=T,ariaLabel:c="three-circles-loading",outerCircleColor:x,innerCircleColor:f,middleCircleColor:m})=>e.jsx(F,{style:t,$visible:s,className:i,"data-testid":"three-circles-wrapper","aria-label":c,...z,children:e.jsxs("svg",{version:"1.1",height:`${a}`,width:`${d}`,xmlns:I,viewBox:"0 0 100 100",enableBackground:"new 0 0 100 100",xmlSpace:"preserve","data-testid":"three-circles-svg",children:[e.jsx("path",{fill:x||n,d:"M31.6,3.5C5.9,13.6-6.6,42.7,3.5,68.4c10.1,25.7,39.2,38.3,64.9,28.1l-3.1-7.9c-21.3,8.4-45.4-2-53.8-23.3 c-8.4-21.3,2-45.4,23.3-53.8L31.6,3.5z",children:e.jsx("animateTransform",{attributeName:"transform",attributeType:"XML",type:"rotate",dur:"2s",from:"0 50 50",to:"360 50 50",repeatCount:"indefinite"})}),e.jsx("path",{fill:m||n,d:"M42.3,39.6c5.7-4.3,13.9-3.1,18.1,2.7c4.3,5.7,3.1,13.9-2.7,18.1l4.1,5.5c8.8-6.5,10.6-19,4.1-27.7 c-6.5-8.8-19-10.6-27.7-4.1L42.3,39.6z",children:e.jsx("animateTransform",{attributeName:"transform",attributeType:"XML",type:"rotate",dur:"1s",from:"0 50 50",to:"-360 50 50",repeatCount:"indefinite"})}),e.jsx("path",{fill:f||n,d:"M82,35.7C74.1,18,53.4,10.1,35.7,18S10.1,46.6,18,64.3l7.6-3.4c-6-13.5,0-29.3,13.5-35.3s29.3,0,35.3,13.5 L82,35.7z",children:e.jsx("animateTransform",{attributeName:"transform",attributeType:"XML",type:"rotate",dur:"2s",from:"0 50 50",to:"360 50 50",repeatCount:"indefinite"})})]})}),N=p`
+`;const S=({wrapperStyle:t={},visible:a=!0,wrapperClass:i="",height:s=100,width:n=100,color:c=L,ariaLabel:h="three-circles-loading",outerCircleColor:x,innerCircleColor:f,middleCircleColor:m})=>e.jsx(z,{style:t,$visible:a,className:i,"data-testid":"three-circles-wrapper","aria-label":h,...T,children:e.jsxs("svg",{version:"1.1",height:`${s}`,width:`${n}`,xmlns:F,viewBox:"0 0 100 100",enableBackground:"new 0 0 100 100",xmlSpace:"preserve","data-testid":"three-circles-svg",children:[e.jsx("path",{fill:x||c,d:"M31.6,3.5C5.9,13.6-6.6,42.7,3.5,68.4c10.1,25.7,39.2,38.3,64.9,28.1l-3.1-7.9c-21.3,8.4-45.4-2-53.8-23.3 c-8.4-21.3,2-45.4,23.3-53.8L31.6,3.5z",children:e.jsx("animateTransform",{attributeName:"transform",attributeType:"XML",type:"rotate",dur:"2s",from:"0 50 50",to:"360 50 50",repeatCount:"indefinite"})}),e.jsx("path",{fill:m||c,d:"M42.3,39.6c5.7-4.3,13.9-3.1,18.1,2.7c4.3,5.7,3.1,13.9-2.7,18.1l4.1,5.5c8.8-6.5,10.6-19,4.1-27.7 c-6.5-8.8-19-10.6-27.7-4.1L42.3,39.6z",children:e.jsx("animateTransform",{attributeName:"transform",attributeType:"XML",type:"rotate",dur:"1s",from:"0 50 50",to:"-360 50 50",repeatCount:"indefinite"})}),e.jsx("path",{fill:f||c,d:"M82,35.7C74.1,18,53.4,10.1,35.7,18S10.1,46.6,18,64.3l7.6-3.4c-6-13.5,0-29.3,13.5-35.3s29.3,0,35.3,13.5 L82,35.7z",children:e.jsx("animateTransform",{attributeName:"transform",attributeType:"XML",type:"rotate",dur:"2s",from:"0 50 50",to:"360 50 50",repeatCount:"indefinite"})})]})}),B=d`
 to {
    stroke-dashoffset: 136;
  }
 `;o.polygon`
   stroke-dasharray: 17;
-  animation: ${N} 2.5s cubic-bezier(0.35, 0.04, 0.63, 0.95) infinite;
+  animation: ${B} 2.5s cubic-bezier(0.35, 0.04, 0.63, 0.95) infinite;
 `;o.svg`
   transform-origin: 50% 65%;
-`;const E=()=>e.jsx(S,{height:"100",width:"100",color:"#d84343",wrapperStyle:{position:"absolute",top:"50%",left:"50%",margin:"auto"},visible:!0,ariaLabel:"three-circles-rotating"}),W=o.div`
+`;const N=()=>e.jsx(S,{height:"100",width:"100",color:"#d84343",wrapperStyle:{position:"absolute",top:"50%",left:"50%",margin:"auto"},visible:!0,ariaLabel:"three-circles-rotating"}),E=o.div`
   padding-bottom: 100px;
-`,X=o.div`
+`,W=o.div`
   display: flex;
   justify-content: space-between;
   /* gap: 64px; */
-`,A=o.div`
+`,X=o.div`
   display: flex;
   flex-direction: column;
   gap: 50px;
   align-items: center;
-`,V=o.button`
+`,A=o.button`
   border: 1px solid;
   border-color: ${t=>t.theme.colors.buttonBorderColor};
   background-color: ${t=>t.theme.colors.whiteColor};
@@ -165,4 +165,4 @@ to {
   width: 18px;
   height: 20px;
   fill: ${t=>t.theme.colors.textTitleColor};
-`,G=()=>{const t=l(y),s=h(),i=a=>s(g(a.target.value));return e.jsx(K,{children:e.jsxs(O,{children:[e.jsx(R,{children:"Location"}),e.jsxs(Y,{children:[e.jsx(U,{type:"text",name:"filter",placeholder:"Kyiv, Ukraine",value:t,onChange:i}),e.jsx(q,{})]})]})})},Q=()=>{const t=h(),s=l(k),i=l(v),a=l(j),d=l(w),n=a.length!==i.length;return u.useEffect(()=>{t($(s))},[t,s]),e.jsxs(W,{children:[e.jsx(D,{children:"Catalog"}),d?e.jsx(E,{}):e.jsxs(X,{children:[e.jsx(G,{}),e.jsxs(A,{children:[e.jsx("ul",{children:i.length!==0&&i.map(c=>e.jsx(L,{camper:c},c.id))}),n&&e.jsx(V,{type:"button",onClick:()=>t(b()),children:"Load more"})]})]})]})};export{Q as default};
+`,G=()=>{const t=l(y),a=p(),i=s=>a(g(s.target.value));return e.jsx(K,{children:e.jsxs(O,{children:[e.jsx(R,{children:"Location"}),e.jsxs(Y,{children:[e.jsx(U,{type:"text",name:"filter",placeholder:"Kyiv, Ukraine",value:t,onChange:i}),e.jsx(q,{})]})]})})},Q=()=>{const t=p(),a=l(k),i=l(v),s=l(j);return $.useEffect(()=>{t(u(a))},[t,a]),e.jsxs(E,{children:[e.jsx(D,{children:"Catalog"}),s?e.jsx(N,{}):e.jsxs(W,{children:[e.jsx(G,{}),e.jsxs(X,{children:[e.jsx("ul",{children:i.length!==0&&i.map(n=>e.jsx(w,{camper:n},n.id))}),e.jsx(A,{type:"button",onClick:()=>t(b()),children:"Load more"})]})]})]})};export{Q as default};
