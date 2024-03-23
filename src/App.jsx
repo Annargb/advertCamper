@@ -17,11 +17,8 @@ function App() {
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<HomePage />} />
-          <Route path="/catalog" element={<CatalogPage />}>
-            {/* <Route path="features/:camperId" element={<div>Features</div>} />
-            <Route path="reviews" element={<Rewiews />} /> */}
-          </Route>
-          <Route path="/favorites" element={<FavoritePage />} />
+          <Route path="catalog" element={<CatalogPage />} />
+          <Route path="favorites" element={<FavoritePage />} />
           <Route path="*" element={<HomePage />} />
         </Route>
       </Routes>
