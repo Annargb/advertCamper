@@ -18,18 +18,13 @@ const CatalogPage = () => {
   const visibleItems = useSelector(selectVisibleItems);
   let isVisibleButton = visibleItems.length !== catalogItems.length;
 
-  // const handleClick = () => {
-  //   dispatch(updateCurrentPage());
-  //   dispatch(fetchCatalog(currentPage));
-  // };
-
   useEffect(() => {
     dispatch(fetchCatalog(currentPage));
   }, [dispatch, currentPage]);
 
   return (
     <Container>
-      <div>Catalog</div>
+      <c.CatalogTitle>Catalog</c.CatalogTitle>
       <c.CamperList>
         {visibleItems.length !== 0 &&
           visibleItems.map((item) => (

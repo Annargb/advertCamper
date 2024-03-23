@@ -110,10 +110,10 @@ export const CamperModalImgItem = styled.li`
 `;
 
 export const CamperModalImg = styled.img`
-  /* overflow: hidden; */
   border-radius: 10px;
   width: 290px;
   height: 310px;
+  object-fit: cover;
 `;
 
 export const CamperModalDescription = styled.p`

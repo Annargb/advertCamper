@@ -2,10 +2,6 @@ import { Route, Routes } from 'react-router-dom';
 import { lazy } from 'react';
 import SharedLayout from 'components/SharedLayout/SharedLayout';
 import { AppWrapper } from './App.styled';
-// import HomePage from './pages/HomePage/HomePage';
-// import CatalogPage from './pages/CatalogPage/CatalogPage';
-// import FavoritePage from './pages/FavoritePage/FavoritePage';
-// import { Rewiews } from './components/Rewiews/Rewiews';
 
 const HomePage = lazy(() => import('pages/HomePage/HomePage.jsx'));
 const CatalogPage = lazy(() => import('pages/CatalogPage/CatalogPage.jsx'));

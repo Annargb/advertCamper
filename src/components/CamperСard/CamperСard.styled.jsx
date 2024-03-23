@@ -42,6 +42,7 @@ export const CamperImg = styled.img`
   border-radius: 10px;
   width: 290px;
   height: 310px;
+  object-fit: cover;
 `;
 
 export const CamperDescription = styled.p`
@@ -112,6 +113,11 @@ export const PressedHeartIcon = styled(FaHeart)`
   width: 24px;
   height: 24px;
   fill: ${(p) => p.theme.colors.redColor};
+  transition: fill 250ms ${(p) => p.theme.transition};
+
+  &:hover {
+    fill: ${(p) => p.theme.colors.hoverButtonColor};
+  }
 `;
 
 export const PriceWrapper = styled.div`

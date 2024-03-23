@@ -79,7 +79,6 @@ h6 {
 
 img {
   display: block;
-  /* max-width: 100%; */
   width: 100%;
   height: auto;
 }
@@ -92,10 +91,6 @@ button {
     cursor: pointer;
     border: none;
 
-  }
-
-.scrollbar-container {
-/* padding-right: 10px; */
   }
 
 .ps--active-x > .ps__rail-x {

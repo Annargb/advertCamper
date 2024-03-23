@@ -24,3 +24,12 @@ export const LoadMoreButton = styled.button`
     border-color: ${(p) => p.theme.colors.redColor};
   }
 `;
+
+export const CatalogTitle = styled.h1`
+  margin-top: 24px;
+  margin-bottom: 44px;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 1.5;
+  color: ${(p) => p.theme.colors.textTitleColor};
+`;
