@@ -12,7 +12,8 @@ export const BookFormWrapper = styled.div`
   padding: 24px;
   width: 448px;
   min-height: 532px;
-  max-height: 612px;
+  /* max-height: 612px; */
+  max-height: 594px;
 `;
 
 export const FormTitle = styled.h3`
