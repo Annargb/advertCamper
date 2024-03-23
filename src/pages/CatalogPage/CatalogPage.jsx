@@ -57,14 +57,12 @@ const CatalogPage = () => {
                 ))}
             </ul> */}
 
-            {
-              <c.LoadMoreButton
-                type="button"
-                onClick={() => dispatch(updateCurrentPage())}
-              >
-                Load more
-              </c.LoadMoreButton>
-            }
+            <c.LoadMoreButton
+              type="button"
+              onClick={() => dispatch(updateCurrentPage())}
+            >
+              Load more
+            </c.LoadMoreButton>
 
             {/* {isVisibleButton && (
               <c.LoadMoreButton
