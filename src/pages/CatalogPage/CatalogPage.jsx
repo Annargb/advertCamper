@@ -5,7 +5,7 @@ import { Loader } from '../../components/Loader/Loader';
 import { fetchCatalog } from '../../redux/operations';
 import {
   selectCatalogItems,
-  selectVisibleItems,
+  // selectVisibleItems,
   selectCurrentPage,
   selectCatalogIsLoading,
   // selectFilteredCampers,
@@ -18,9 +18,9 @@ const CatalogPage = () => {
   const dispatch = useDispatch();
   const currentPage = useSelector(selectCurrentPage);
   const catalogItems = useSelector(selectCatalogItems);
-  const visibleItems = useSelector(selectVisibleItems);
+  // const visibleItems = useSelector(selectVisibleItems);
   const isLoading = useSelector(selectCatalogIsLoading);
-  const isVisibleButton = visibleItems.length !== catalogItems.length;
+  // const isVisibleButton = visibleItems.length !== catalogItems.length;
 
   // let filteredCampers = useSelector(selectFilteredCampers);
 
@@ -57,14 +57,23 @@ const CatalogPage = () => {
                 ))}
             </ul> */}
 
-            {isVisibleButton && (
+            {
               <c.LoadMoreButton
                 type="button"
                 onClick={() => dispatch(updateCurrentPage())}
               >
                 Load more
               </c.LoadMoreButton>
-            )}
+            }
+
+            {/* {isVisibleButton && (
+              <c.LoadMoreButton
+                type="button"
+                onClick={() => dispatch(updateCurrentPage())}
+              >
+                Load more
+              </c.LoadMoreButton>
+            )} */}
           </c.CamperListContainer>
         </c.CatalogWrapper>
       )}
