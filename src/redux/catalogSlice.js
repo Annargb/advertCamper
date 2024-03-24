@@ -35,7 +35,6 @@ export const catalogSlice = createSlice({
         state.isLoading = false;
         state.error = null;
 
-        //
         const fetchedArr = state.catalogItems.some(
           (item) => item.id === action.payload[0].id
         );
