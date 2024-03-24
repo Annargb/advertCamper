@@ -18,10 +18,8 @@ const CatalogPage = () => {
   const currentPage = useSelector(selectCurrentPage);
   const catalogItems = useSelector(selectCatalogItems);
   const isLoading = useSelector(selectCatalogIsLoading);
-
-  const isVisibleButton = catalogItems.length % 4 === 0;
-
   const filteredCampers = useSelector(selectFilteredCampers);
+  const isVisibleButton = catalogItems.length % 4 === 0;
 
   useEffect(() => {
     dispatch(fetchCatalog(currentPage));
@@ -33,35 +31,86 @@ const CatalogPage = () => {
       {isLoading ? (
         <Loader />
       ) : (
-        <c.CatalogWrapper>
-          <Aside />
-          <c.CamperListContainer>
-            {/* <ul>
-              {catalogItems.length !== 0 &&
-                catalogItems.map((item) => (
-                  <CamperCard key={item.id} camper={item} />
-                ))}
-            </ul> */}
-            <ul>
-              {filteredCampers.length !== 0 &&
-                filteredCampers.map((item) => (
-                  <CamperCard key={item.id} camper={item} />
-                ))}
-            </ul>
-
-            {isVisibleButton && (
-              <c.LoadMoreButton
-                type="button"
-                onClick={() => dispatch(updateCurrentPage())}
-              >
-                Load more
-              </c.LoadMoreButton>
-            )}
-          </c.CamperListContainer>
-        </c.CatalogWrapper>
+        <>
+          {filteredCampers.length !== 0 ? (
+            <c.CatalogWrapper>
+              <Aside />
+              <c.CamperListContainer>
+                <ul>
+                  {filteredCampers.map((item) => (
+                    <CamperCard key={item.id} camper={item} />
+                  ))}
+                </ul>
+                {isVisibleButton && (
+                  <c.LoadMoreButton
+                    type="button"
+                    onClick={() => dispatch(updateCurrentPage())}
+                  >
+                    Load more
+                  </c.LoadMoreButton>
+                )}
+              </c.CamperListContainer>
+            </c.CatalogWrapper>
+          ) : (
+            <p>No campers matching the filters</p>
+          )}
+        </>
       )}
     </c.CatalogPageContainer>
   );
 };
 
 export default CatalogPage;
+
+// const CatalogPage = () => {
+//   const dispatch = useDispatch();
+//   const currentPage = useSelector(selectCurrentPage);
+//   const catalogItems = useSelector(selectCatalogItems);
+//   const isLoading = useSelector(selectCatalogIsLoading);
+
+//   const isVisibleButton = catalogItems.length % 4 === 0;
+
+//   const filteredCampers = useSelector(selectFilteredCampers);
+
+//   useEffect(() => {
+//     dispatch(fetchCatalog(currentPage));
+//   }, [dispatch, currentPage]);
+
+//   return (
+//     <c.CatalogPageContainer>
+//       <c.CatalogTitle>Catalog</c.CatalogTitle>
+//       {isLoading ? (
+//         <Loader />
+//       ) : (
+//         <c.CatalogWrapper>
+//           <Aside />
+//           <c.CamperListContainer>
+//             {/* <ul>
+//               {catalogItems.length !== 0 &&
+//                 catalogItems.map((item) => (
+//                   <CamperCard key={item.id} camper={item} />
+//                 ))}
+//             </ul> */}
+//             <ul>
+//               {filteredCampers.length !== 0 &&
+//                 filteredCampers.map((item) => (
+//                   <CamperCard key={item.id} camper={item} />
+//                 ))}
+//             </ul>
+
+//             {isVisibleButton && (
+//               <c.LoadMoreButton
+//                 type="button"
+//                 onClick={() => dispatch(updateCurrentPage())}
+//               >
+//                 Load more
+//               </c.LoadMoreButton>
+//             )}
+//           </c.CamperListContainer>
+//         </c.CatalogWrapper>
+//       )}
+//     </c.CatalogPageContainer>
+//   );
+// };
+
+// export default CatalogPage;
