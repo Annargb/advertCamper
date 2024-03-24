@@ -26,6 +26,7 @@ export const ReviewerNameLetter = styled.span`
 `;
 
 export const ReviewerName = styled.span`
+  margin-bottom: 4px;
   font-weight: 600;
   font-size: 18px;
   line-height: 1.33;

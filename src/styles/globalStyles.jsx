@@ -98,8 +98,6 @@ button {
 
 .ps__rail-y {
   border-radius: 7px; 
-  /* width: 7px;  */
-  /* right: -6px; */
    right: -18px;
 }
 
@@ -108,7 +106,6 @@ button {
   width: 8px; 
   background: #d9d9d9; 
   height: 264px; 
-    /* right: -16px; */
 }
 
 `;

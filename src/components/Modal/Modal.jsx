@@ -53,7 +53,12 @@ export const CamperModal = ({ isModalOpen, closeModal, camper }) => {
           <c.CamperSubtitleModalWrapper>
             <c.SubtitleModalWrapper>
               <c.StarIcon />
-              <c.CamperSubtitleModalText>{`${camper.rating}(${camper.reviews.length} Reviews)`}</c.CamperSubtitleModalText>
+              <c.CamperSubtitleModalText
+                style={{
+                  textDecoration: 'underline',
+                  textDecorationSkipInk: 'none',
+                }}
+              >{`${camper.rating}(${camper.reviews.length} Reviews)`}</c.CamperSubtitleModalText>
             </c.SubtitleModalWrapper>
             <c.SubtitleModalWrapper>
               <c.LocationIcon />
