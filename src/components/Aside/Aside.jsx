@@ -26,7 +26,7 @@ export const Aside = () => {
   };
 
   const applyFilters = () => {
-    dispatch(updateLocationFilter(locationFilter));
+    // dispatch(updateLocationFilter(locationFilter));
     dispatch(updateVanType(carType));
   };
 
