@@ -25,3 +25,8 @@ export const DetailsText = styled.p`
   text-transform: capitalize;
   color: ${(p) => p.theme.colors.textTitleColor};
 `;
+
+export const DetailsIcon = styled.svg`
+  width: 20px;
+  height: 20px;
+`;

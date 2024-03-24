@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import { updateFavorites } from '../../redux/catalogSlice';
 import { selectFavorites } from '../../redux/selectors';
 import { useDispatch, useSelector } from 'react-redux';
-import van from '../../images/van1.webp';
+import { NotFound } from '../../components/NotFound/NotFound';
 
 const FavoritePage = () => {
   const myFavorites = useSelector(selectFavorites);
@@ -22,10 +22,9 @@ const FavoritePage = () => {
       <c.FavoriteTitle>Favorite</c.FavoriteTitle>
       <c.CommonList>
         {!myFavorites.length ? (
-          <c.NotFoundWrapper>
-            <c.NotFoundText>{`It seems like you don't have your favorite campervans`}</c.NotFoundText>
-            <c.NotfoundImg src={van} alt="van" />
-          </c.NotFoundWrapper>
+          <NotFound
+            text={`It seems like you don't have your favorite campervans`}
+          />
         ) : (
           <ul>
             {myFavorites.length !== 0 &&

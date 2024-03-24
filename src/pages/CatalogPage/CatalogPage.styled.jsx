@@ -7,7 +7,6 @@ export const CatalogPageContainer = styled.div`
 export const CatalogWrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  /* gap: 64px; */
 `;
 
 export const CamperListContainer = styled.div`
@@ -47,29 +46,4 @@ export const CatalogTitle = styled.h1`
   font-size: 28px;
   line-height: 1.5;
   color: ${(p) => p.theme.colors.textTitleColor};
-`;
-
-export const NotFoundContainer = styled.div`
-  width: 888px;
-  height: 358px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 24px;
-`;
-
-export const NotFoundText = styled.p`
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 1.2;
-  text-align: center;
-
-  color: ${(p) => p.theme.colors.textColor};
-`;
-
-export const NotfoundImg = styled.img`
-  width: 320px;
-  height: 320px;
-  object-fit: cover;
 `;

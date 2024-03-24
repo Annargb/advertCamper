@@ -54,7 +54,7 @@ export const FeaturesDetailsItemText = styled.p`
   text-transform: capitalize;
 `;
 
-export const IconWrapper = styled.span`
+export const FeatureIcon = styled.svg`
   width: 20px;
   height: 20px;
 `;

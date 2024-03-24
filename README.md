@@ -3,7 +3,7 @@ Application for searching and booking campers in Ukraine.
 
 From the Home page of the application, you can go to the Catalog, where there is
 a list of available campers for booking.
-![App Page](./src/assets/catalogepage.png)
+![App Page](./src/assets/catalogpage.png)
 
 Filters are available on the Catalog page, so you can filter the campers based
 on your request. ![App Page](./src/assets/filters.png)

@@ -8,7 +8,6 @@ export const fetchCatalog = createAsyncThunk(
   'catalog',
   async (page, thunkAPI) => {
     try {
-      // const response = await axios.get('catalog');
       const response = await axios.get(`catalog?page=${page}&limit=4`);
       return response.data;
     } catch (error) {

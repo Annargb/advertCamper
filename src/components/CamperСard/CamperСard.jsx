@@ -89,7 +89,12 @@ export const CamperCard = ({ camper }) => {
         <c.CamperSubtitleWrapper>
           <c.SubtitleWrapper>
             <c.StarIcon />
-            <c.CamperSubtitleText>{`${camper.rating}(${camper.reviews.length} Reviews)`}</c.CamperSubtitleText>
+            <c.CamperSubtitleText
+              style={{
+                textDecoration: 'underline',
+                textDecorationSkipInk: 'none',
+              }}
+            >{`${camper.rating}(${camper.reviews.length} Reviews)`}</c.CamperSubtitleText>
           </c.SubtitleWrapper>
           <c.SubtitleWrapper>
             <c.LocationIcon />

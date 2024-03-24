@@ -1,6 +1,5 @@
 import * as c from './CamperDetails.styled';
-import { TbAutomaticGearbox } from 'react-icons/tb';
-import { TbToolsKitchen2 } from 'react-icons/tb';
+import { TbAutomaticGearbox, TbToolsKitchen2 } from 'react-icons/tb';
 import { IoBedOutline } from 'react-icons/io5';
 import icons from '../../images/icons.svg';
 
@@ -8,9 +7,9 @@ export const CamperDetails = ({ camper }) => {
   return (
     <c.DetailsList>
       <c.DetailsItems>
-        <svg style={{ width: '20', height: '20' }}>
+        <c.DetailsIcon>
           <use href={`${icons}#icon-users`} />
-        </svg>
+        </c.DetailsIcon>
         <c.DetailsText>{`${camper.adults} adults`}</c.DetailsText>
       </c.DetailsItems>
       <c.DetailsItems>
@@ -18,9 +17,9 @@ export const CamperDetails = ({ camper }) => {
         <c.DetailsText>{camper.transmission}</c.DetailsText>
       </c.DetailsItems>
       <c.DetailsItems>
-        <svg style={{ width: '20', height: '20' }}>
+        <c.DetailsIcon>
           <use href={`${icons}#icon-petrol`} />
-        </svg>
+        </c.DetailsIcon>
         <c.DetailsText>{camper.engine}</c.DetailsText>
       </c.DetailsItems>
       <c.DetailsItems>
@@ -32,9 +31,9 @@ export const CamperDetails = ({ camper }) => {
         <c.DetailsText>{`${camper.details.beds} beds`}</c.DetailsText>
       </c.DetailsItems>
       <c.DetailsItems>
-        <svg style={{ width: '20', height: '20' }}>
+        <c.DetailsIcon>
           <use href={`${icons}#icon-ac`} />
-        </svg>
+        </c.DetailsIcon>
         <c.DetailsText>AC</c.DetailsText>
       </c.DetailsItems>
     </c.DetailsList>

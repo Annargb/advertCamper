@@ -1,17 +1,17 @@
 import * as c from './Features.styled';
-import { TbAutomaticGearbox } from 'react-icons/tb';
-import { TbToolsKitchen2 } from 'react-icons/tb';
-import { IoBedOutline } from 'react-icons/io5';
-import { TbAirConditioning } from 'react-icons/tb';
+import {
+  TbAutomaticGearbox,
+  TbToolsKitchen2,
+  TbAirConditioning,
+  TbRadio,
+  TbMicrowave,
+  TbToiletPaper,
+} from 'react-icons/tb';
+import { IoBedOutline, IoWaterOutline } from 'react-icons/io5';
+import { LuShowerHead, LuMicrowave } from 'react-icons/lu';
 import { LiaCompactDiscSolid } from 'react-icons/lia';
-import { TbRadio } from 'react-icons/tb';
-import { TbMicrowave } from 'react-icons/tb';
-import { LuShowerHead } from 'react-icons/lu';
-import { TbToiletPaper } from 'react-icons/tb';
-import { IoWaterOutline } from 'react-icons/io5';
 import { CgSmartHomeRefrigerator } from 'react-icons/cg';
 import { HiFire } from 'react-icons/hi';
-import { LuMicrowave } from 'react-icons/lu';
 import icons from '../../images/icons.svg';
 
 export const Features = ({ camper }) => {
@@ -19,9 +19,9 @@ export const Features = ({ camper }) => {
     <div>
       <c.DetailsList>
         <c.DetailsItems>
-          <svg style={{ width: '20', height: '20' }}>
+          <c.FeatureIcon>
             <use href={`${icons}#icon-users`} />
-          </svg>
+          </c.FeatureIcon>
           <c.DetailsText>{`${camper.adults} adults`}</c.DetailsText>
         </c.DetailsItems>
         <c.DetailsItems>
@@ -29,15 +29,15 @@ export const Features = ({ camper }) => {
           <c.DetailsText>{camper.transmission}</c.DetailsText>
         </c.DetailsItems>
         <c.DetailsItems>
-          <svg style={{ width: '20', height: '20' }}>
+          <c.FeatureIcon>
             <use href={`${icons}#icon-ac`} />
-          </svg>
+          </c.FeatureIcon>
           <c.DetailsText>AC</c.DetailsText>
         </c.DetailsItems>
         <c.DetailsItems>
-          <svg style={{ width: '20', height: '20' }}>
+          <c.FeatureIcon>
             <use href={`${icons}#icon-petrol`} />
-          </svg>
+          </c.FeatureIcon>
           <c.DetailsText>{camper.engine}</c.DetailsText>
         </c.DetailsItems>
         {camper.details.kitchen !== 0 && (

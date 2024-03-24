@@ -42,8 +42,6 @@ export const catalogSlice = createSlice({
         if (!fetchedArr) {
           state.catalogItems.push(...action.payload);
         }
-
-        // state.catalogItems.push(...action.payload);
       })
       .addCase(fetchCatalog.rejected, handleRejected);
   },
