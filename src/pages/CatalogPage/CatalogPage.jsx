@@ -12,6 +12,7 @@ import {
 import { updateCurrentPage } from '../../redux/catalogSlice';
 import * as c from './CatalogPage.styled';
 import { Aside } from '../../components/Aside/Aside';
+import van from '../../images/van1.webp';
 
 const CatalogPage = () => {
   const dispatch = useDispatch();
@@ -51,7 +52,10 @@ const CatalogPage = () => {
                 )}
               </c.CamperListContainer>
             ) : (
-              <p>No campers matching the filters</p>
+              <c.NotFoundContainer>
+                <c.NotFoundText>No campers matching the filters</c.NotFoundText>
+                <c.NotfoundImg src={van} alt="van" />
+              </c.NotFoundContainer>
             )}
           </c.CatalogWrapper>
         </>

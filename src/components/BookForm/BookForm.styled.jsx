@@ -32,6 +32,7 @@ export const Field = styled(FormikField)`
   font-weight: 400;
   font-size: 16px;
   line-height: 1.25;
+  /* color: ${(p) => p.theme.colors.textTitleColor}; */
   color: ${(p) => p.theme.colors.inputsText};
   border-radius: 10px;
   background-color: ${(p) => p.theme.colors.inputsColor};

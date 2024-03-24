@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectLocationFilter } from '../../redux/selectors';
 import {
@@ -5,15 +6,8 @@ import {
   updateVanType,
   resetFilters,
 } from '../../redux/filterSlice';
-import {
-  LocationField,
-  FilterLabel,
-  FilterInput,
-  FilterWrapper,
-  FilterIcon,
-  AsideWrapper,
-} from './Aside.styled';
-import { useState } from 'react';
+import * as c from './Aside.styled';
+import icons from '../../images/icons.svg';
 
 export const Aside = () => {
   const locationFilter = useSelector(selectLocationFilter);
@@ -31,57 +25,85 @@ export const Aside = () => {
     dispatch(updateVanType(carType));
   };
 
+  const handleResetFilters = () => {
+    setCarType('');
+    dispatch(resetFilters());
+  };
+
   return (
-    <AsideWrapper>
-      <LocationField>
-        <FilterLabel>Location</FilterLabel>
-        <FilterWrapper>
-          <FilterInput
+    <c.AsideWrapper>
+      <c.LocationField>
+        <c.LocationLabel>Location</c.LocationLabel>
+        <c.LocationFilterWrapper>
+          <c.LocationInput
             type="text"
             name="filter"
             placeholder="Kyiv, Ukraine"
             value={locationFilter}
             onChange={changeLocationFilter}
-          ></FilterInput>
-          <FilterIcon />
-        </FilterWrapper>
-      </LocationField>
+          ></c.LocationInput>
+          <c.FilterIcon />
+        </c.LocationFilterWrapper>
+      </c.LocationField>
 
-      <form id="carForm">
-        <label>
-          <input
-            type="radio"
-            name="camperType"
-            value="panelTruck"
+      <c.TypeForm id="typeVansForm">
+        <c.FilterLabel>Filters</c.FilterLabel>
+        <c.FilterTypeTitle>Vehicle type</c.FilterTypeTitle>
+        <c.CheckboxWrapper>
+          <c.CustomCheckbox
             checked={carType === 'panelTruck'}
-            onChange={changeCarType}
-          />{' '}
-          Van
-        </label>
-        <label>
-          <input
-            type="radio"
-            name="camperType"
-            value="fullyIntegrated"
-            checked={carType === 'fullyIntegrated'}
-            onChange={changeCarType}
-          />{' '}
-          Fully Integrated
-        </label>
-        <label>
-          <input
-            type="radio"
-            name="camperType"
-            value="alcove"
+            style={{ padding: '19px 30px' }}
+          >
+            <c.CheckboxInput
+              type="radio"
+              name="camperType"
+              value="panelTruck"
+              onChange={changeCarType}
+            />{' '}
+            <c.CheckboxIcon>
+              <use href={`${icons}#icon-camper3`} />
+            </c.CheckboxIcon>
+            <c.CheckboxText>Van</c.CheckboxText>
+          </c.CustomCheckbox>
+          <c.CustomCheckbox checked={carType === 'fullyIntegrated'}>
+            <c.CheckboxInput
+              type="radio"
+              name="camperType"
+              value="fullyIntegrated"
+              onChange={changeCarType}
+            />{' '}
+            <c.CheckboxIcon>
+              <use href={`${icons}#icon-camper2`} />
+            </c.CheckboxIcon>
+            <c.CheckboxText>Fully Integrated</c.CheckboxText>
+          </c.CustomCheckbox>
+          <c.CustomCheckbox
             checked={carType === 'alcove'}
-            onChange={changeCarType}
-          />{' '}
-          Alcove
-        </label>
-      </form>
+            style={{ padding: '19px 30px' }}
+          >
+            <c.CheckboxInput
+              type="radio"
+              name="camperType"
+              value="alcove"
+              onChange={changeCarType}
+            />{' '}
+            <c.CheckboxIcon>
+              <use href={`${icons}#icon-camper1`} />
+            </c.CheckboxIcon>
+            <c.CheckboxText>Alcove</c.CheckboxText>
+          </c.CustomCheckbox>
+        </c.CheckboxWrapper>
+      </c.TypeForm>
 
-      <button onClick={applyFilters}>Search</button>
-      <button onClick={() => dispatch(resetFilters())}>Reset filters</button>
-    </AsideWrapper>
+      <c.ButtonWrapper>
+        <c.FiltersButton onClick={applyFilters}>Search</c.FiltersButton>
+        <c.FiltersButton
+          onClick={handleResetFilters}
+          style={{ padding: '16px 40px' }}
+        >
+          Reset filters
+        </c.FiltersButton>
+      </c.ButtonWrapper>
+    </c.AsideWrapper>
   );
 };

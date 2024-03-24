@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 
 export const HomeBgImg = styled.div`
   flex-shrink: 0;
-  width: 700px;
-  height: 700px;
+  width: 640px;
+  height: 640px;
   background-repeat: no-repeat;
   background-position: left;
   background-size: cover;
