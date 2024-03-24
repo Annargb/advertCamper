@@ -8,7 +8,7 @@ import {
   // selectVisibleItems,
   selectCurrentPage,
   selectCatalogIsLoading,
-  // selectFilteredCampers,
+  selectFilteredCampers,
 } from '../../redux/selectors';
 import { updateCurrentPage } from '../../redux/catalogSlice';
 import * as c from './CatalogPage.styled';
@@ -23,7 +23,7 @@ const CatalogPage = () => {
   // const isVisibleButton = visibleItems.length !== catalogItems.length;
   const isVisibleButton = catalogItems.length % 4 === 0;
 
-  // let filteredCampers = useSelector(selectFilteredCampers);
+  const filteredCampers = useSelector(selectFilteredCampers);
 
   useEffect(() => {
     dispatch(fetchCatalog(currentPage));
@@ -38,18 +38,18 @@ const CatalogPage = () => {
         <c.CatalogWrapper>
           <Aside />
           <c.CamperListContainer>
-            <ul>
+            {/* <ul>
               {catalogItems.length !== 0 &&
                 catalogItems.map((item) => (
                   <CamperCard key={item.id} camper={item} />
                 ))}
-            </ul>
-            {/* <ul>
+            </ul> */}
+            <ul>
               {filteredCampers.length !== 0 &&
                 filteredCampers.map((item) => (
                   <CamperCard key={item.id} camper={item} />
                 ))}
-            </ul> */}
+            </ul>
 
             {/* <ul>
               {visibleItems.length !== 0 &&

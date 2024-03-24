@@ -6,10 +6,11 @@ export const selectCatalogIsLoading = (state) => state.catalog.isLoading;
 export const selectTotalPages = (state) => state.catalog.totalPages;
 export const selectCurrentPage = (state) => state.catalog.currentPage;
 export const selectFavorites = (state) => state.catalog.favorites;
-export const selectFilter = (state) => state.filter;
+export const selectLocationFilter = (state) => state.filter.location;
+export const selectVanType = (state) => state.filter.vanType;
 
 export const selectFilteredCampers = createSelector(
-  [selectCatalogItems, selectFilter],
+  [selectCatalogItems, selectLocationFilter],
   (camper, filter) => {
     return camper.filter((camper) =>
       camper.location.toLowerCase().includes(filter.toLowerCase())

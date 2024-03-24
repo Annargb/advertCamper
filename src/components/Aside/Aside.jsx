@@ -32,6 +32,19 @@ export const Aside = () => {
           <FilterIcon />
         </FilterWrapper>
       </LocationField>
+      <form id="carForm">
+        <label>
+          <input type="radio" name="camperType" value="sedan" /> Седан
+        </label>
+        <label>
+          <input type="radio" name="camperType" value="suv" /> Позашляховик
+        </label>
+        <label>
+          <input type="radio" name="camperType" value="hatchback" /> Хетчбек
+        </label>
+      </form>
+
+      <button>Search</button>
     </AsideWrapper>
   );
 };

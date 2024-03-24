@@ -17,7 +17,7 @@ export const HomeWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 14px;
+  gap: 40px;
 `;
 
 export const HomeSlogan = styled.h1`
