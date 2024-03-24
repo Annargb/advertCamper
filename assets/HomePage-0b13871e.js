@@ -1,7 +1,7 @@
-import{u as t,L as r,j as o,C as n}from"./index-0164af16.js";import{v as i}from"./van1-33f09857.js";const s=t.div`
+import{u as t,L as r,j as o,C as n}from"./index-c19e4f35.js";import{v as i}from"./van1-33f09857.js";const s=t.div`
   flex-shrink: 0;
-  width: 640px;
-  height: 640px;
+  width: 630px;
+  height: 630px;
   background-repeat: no-repeat;
   background-position: left;
   background-size: cover;
@@ -11,7 +11,7 @@ import{u as t,L as r,j as o,C as n}from"./index-0164af16.js";import{v as i}from"
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 40px;
+  gap: 60px;
 `,l=t.h1`
   font-weight: 600;
   font-size: 84px;
