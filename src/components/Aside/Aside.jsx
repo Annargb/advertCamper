@@ -1,6 +1,10 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { selectLocationFilter } from '../../redux/selectors';
-import { updateLocationFilter, updateVanType } from '../../redux/filterSlice';
+import {
+  updateLocationFilter,
+  updateVanType,
+  resetFilters,
+} from '../../redux/filterSlice';
 import {
   LocationField,
   FilterLabel,
@@ -15,9 +19,7 @@ export const Aside = () => {
   const locationFilter = useSelector(selectLocationFilter);
   const dispatch = useDispatch();
   const [carType, setCarType] = useState('');
-  // const [locationValue, setLocationValue] = useState('');
 
-  // const changeLocationFilter = (event) => setLocationValue(event.target.value);
   const changeLocationFilter = (event) =>
     dispatch(updateLocationFilter(event.target.value));
 
@@ -26,7 +28,6 @@ export const Aside = () => {
   };
 
   const applyFilters = () => {
-    // dispatch(updateLocationFilter(locationFilter));
     dispatch(updateVanType(carType));
   };
 
@@ -80,6 +81,7 @@ export const Aside = () => {
       </form>
 
       <button onClick={applyFilters}>Search</button>
+      <button onClick={() => dispatch(resetFilters())}>Reset filters</button>
     </AsideWrapper>
   );
 };

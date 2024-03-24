@@ -13,8 +13,12 @@ export const filterSlice = createSlice({
     updateVanType(state, action) {
       state.vanType = action.payload;
     },
+    resetFilters(state) {
+      state.vanType = '';
+    },
   },
 });
 
-export const { updateLocationFilter, updateVanType } = filterSlice.actions;
+export const { updateLocationFilter, updateVanType, resetFilters } =
+  filterSlice.actions;
 export const filterReducer = filterSlice.reducer;
