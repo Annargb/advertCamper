@@ -24,10 +24,6 @@ export const catalogSlice = createSlice({
   reducers: {
     updateCurrentPage(state) {
       state.currentPage += 1;
-      // if (state.currentPage < state.totalPages) {
-      //   state.currentPage += 1;
-      //   state.visibleItems = state.catalogItems.slice(0, state.currentPage * 4);
-      // }
     },
     updateFavorites(state, action) {
       state.favorites = action.payload;
@@ -39,7 +35,6 @@ export const catalogSlice = createSlice({
       .addCase(fetchCatalog.fulfilled, (state, action) => {
         state.isLoading = false;
         state.error = null;
-        // state.catalogItems = action.payload;
         state.catalogItems.push(...action.payload);
         state.totalPages = Math.ceil(state.catalogItems.length / 4);
         state.visibleItems = state.catalogItems.slice(0, state.currentPage * 4);
