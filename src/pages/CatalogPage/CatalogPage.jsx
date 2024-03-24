@@ -21,20 +21,20 @@ const CatalogPage = () => {
   const filteredCampers = useSelector(selectFilteredCampers);
   const isVisibleButton = catalogItems.length % 4 === 0;
 
-  useEffect(() => {
-    if (catalogItems.length === 0) {
-      dispatch(fetchCatalog(currentPage));
-    }
-  }, [dispatch, currentPage, catalogItems]);
-
   // useEffect(() => {
-  //   dispatch(fetchCatalog(currentPage));
-  // }, [dispatch, currentPage]);
+  //   if (catalogItems.length === 0) {
+  //     dispatch(fetchCatalog(currentPage));
+  //   }
+  // }, [dispatch, currentPage, catalogItems]);
 
-  const handleClick = () => {
-    dispatch(updateCurrentPage());
+  useEffect(() => {
     dispatch(fetchCatalog(currentPage));
-  };
+  }, [dispatch, currentPage]);
+
+  // const handleClick = () => {
+  //   dispatch(updateCurrentPage());
+  //   dispatch(fetchCatalog(currentPage));
+  // };
 
   return (
     <c.CatalogPageContainer>
@@ -55,8 +55,8 @@ const CatalogPage = () => {
                 {isVisibleButton && (
                   <c.LoadMoreButton
                     type="button"
-                    onClick={handleClick}
-                    // onClick={() => dispatch(updateCurrentPage())}
+                    // onClick={handleClick}
+                    onClick={() => dispatch(updateCurrentPage())}
                   >
                     Load more
                   </c.LoadMoreButton>

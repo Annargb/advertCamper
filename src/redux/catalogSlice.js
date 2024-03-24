@@ -16,7 +16,6 @@ export const catalogSlice = createSlice({
     catalogItems: [],
     visibleItems: [],
     currentPage: 1,
-    totalPages: 1,
     favorites: [],
     isLoading: false,
     error: null,
@@ -35,9 +34,17 @@ export const catalogSlice = createSlice({
       .addCase(fetchCatalog.fulfilled, (state, action) => {
         state.isLoading = false;
         state.error = null;
-        state.catalogItems.push(...action.payload);
-        state.totalPages = Math.ceil(state.catalogItems.length / 4);
-        state.visibleItems = state.catalogItems.slice(0, state.currentPage * 4);
+
+        //
+        const fetchedArr = state.catalogItems.some(
+          (item) => item.id === action.payload[0].id
+        );
+
+        if (!fetchedArr) {
+          state.catalogItems.push(...action.payload);
+        }
+
+        // state.catalogItems.push(...action.payload);
       })
       .addCase(fetchCatalog.rejected, handleRejected);
   },
