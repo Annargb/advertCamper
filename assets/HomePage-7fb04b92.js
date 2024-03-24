@@ -1,4 +1,4 @@
-import{u as t,L as r,j as o,C as n}from"./index-33b7db3e.js";import{v as i}from"./van1-33f09857.js";const s=t.div`
+import{u as t,L as r,j as o,C as n}from"./index-eb3b3e1e.js";import{v as i}from"./van1-33f09857.js";const s=t.div`
   flex-shrink: 0;
   width: 700px;
   height: 700px;
@@ -11,7 +11,7 @@ import{u as t,L as r,j as o,C as n}from"./index-33b7db3e.js";import{v as i}from"
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 14px;
+  gap: 40px;
 `,l=t.h1`
   font-weight: 600;
   font-size: 84px;
