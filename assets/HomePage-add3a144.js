@@ -1,7 +1,7 @@
-import{u as t,L as r,j as o,C as n}from"./index-889e377e.js";import{v as i}from"./van1-33f09857.js";const s=t.div`
+import{u as t,L as r,j as o,C as n}from"./index-0164af16.js";import{v as i}from"./van1-33f09857.js";const s=t.div`
   flex-shrink: 0;
-  width: 700px;
-  height: 700px;
+  width: 640px;
+  height: 640px;
   background-repeat: no-repeat;
   background-position: left;
   background-size: cover;
