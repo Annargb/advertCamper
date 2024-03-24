@@ -1,4 +1,4 @@
-import{u as o,h as b,j as t,a as p,b as C,r as y,c as k,d as v,e as w,f as T,g as L}from"./index-c19e4f35.js";import{C as F,s as z,i as x,a as I,b as B,c as N,d as M,e as S}from"./selectors-9ad4e466.js";import{v as P}from"./van1-33f09857.js";const V="#4fa94d",W={"aria-busy":!0,role:"progressbar"},A=o.div`
+import{u as o,h as b,j as t,a as p,b as C,r as y,c as k,d as v,e as w,f as T,g as L}from"./index-93f71628.js";import{C as F,s as z,i as x,a as B,b as I,c as M,d as N,e as S,N as P}from"./NotFound-a4868cf7.js";import"./van1-33f09857.js";const V="#4fa94d",W={"aria-busy":!0,role:"progressbar"},A=o.div`
   display: ${e=>e.$visible?"flex":"none"};
 `,E="http://www.w3.org/2000/svg",i=242.776657104492,R=1.6,X=b`
 12.5% {
@@ -71,7 +71,7 @@ to {
   &:nth-child(12n + 11) {
     stroke-opacity: 0.92;
   }
-`;const K=({wrapperStyle:e={},visible:r=!0,wrapperClass:s="",height:a=100,width:l=100,color:n=V,ariaLabel:c="three-circles-loading",outerCircleColor:h,innerCircleColor:d,middleCircleColor:j})=>t.jsx(A,{style:e,$visible:r,className:s,"data-testid":"three-circles-wrapper","aria-label":c,...W,children:t.jsxs("svg",{version:"1.1",height:`${a}`,width:`${l}`,xmlns:E,viewBox:"0 0 100 100",enableBackground:"new 0 0 100 100",xmlSpace:"preserve","data-testid":"three-circles-svg",children:[t.jsx("path",{fill:h||n,d:"M31.6,3.5C5.9,13.6-6.6,42.7,3.5,68.4c10.1,25.7,39.2,38.3,64.9,28.1l-3.1-7.9c-21.3,8.4-45.4-2-53.8-23.3 c-8.4-21.3,2-45.4,23.3-53.8L31.6,3.5z",children:t.jsx("animateTransform",{attributeName:"transform",attributeType:"XML",type:"rotate",dur:"2s",from:"0 50 50",to:"360 50 50",repeatCount:"indefinite"})}),t.jsx("path",{fill:j||n,d:"M42.3,39.6c5.7-4.3,13.9-3.1,18.1,2.7c4.3,5.7,3.1,13.9-2.7,18.1l4.1,5.5c8.8-6.5,10.6-19,4.1-27.7 c-6.5-8.8-19-10.6-27.7-4.1L42.3,39.6z",children:t.jsx("animateTransform",{attributeName:"transform",attributeType:"XML",type:"rotate",dur:"1s",from:"0 50 50",to:"-360 50 50",repeatCount:"indefinite"})}),t.jsx("path",{fill:d||n,d:"M82,35.7C74.1,18,53.4,10.1,35.7,18S10.1,46.6,18,64.3l7.6-3.4c-6-13.5,0-29.3,13.5-35.3s29.3,0,35.3,13.5 L82,35.7z",children:t.jsx("animateTransform",{attributeName:"transform",attributeType:"XML",type:"rotate",dur:"2s",from:"0 50 50",to:"360 50 50",repeatCount:"indefinite"})})]})}),O=b`
+`;const K=({wrapperStyle:e={},visible:r=!0,wrapperClass:n="",height:a=100,width:l=100,color:s=V,ariaLabel:c="three-circles-loading",outerCircleColor:h,innerCircleColor:d,middleCircleColor:j})=>t.jsx(A,{style:e,$visible:r,className:n,"data-testid":"three-circles-wrapper","aria-label":c,...W,children:t.jsxs("svg",{version:"1.1",height:`${a}`,width:`${l}`,xmlns:E,viewBox:"0 0 100 100",enableBackground:"new 0 0 100 100",xmlSpace:"preserve","data-testid":"three-circles-svg",children:[t.jsx("path",{fill:h||s,d:"M31.6,3.5C5.9,13.6-6.6,42.7,3.5,68.4c10.1,25.7,39.2,38.3,64.9,28.1l-3.1-7.9c-21.3,8.4-45.4-2-53.8-23.3 c-8.4-21.3,2-45.4,23.3-53.8L31.6,3.5z",children:t.jsx("animateTransform",{attributeName:"transform",attributeType:"XML",type:"rotate",dur:"2s",from:"0 50 50",to:"360 50 50",repeatCount:"indefinite"})}),t.jsx("path",{fill:j||s,d:"M42.3,39.6c5.7-4.3,13.9-3.1,18.1,2.7c4.3,5.7,3.1,13.9-2.7,18.1l4.1,5.5c8.8-6.5,10.6-19,4.1-27.7 c-6.5-8.8-19-10.6-27.7-4.1L42.3,39.6z",children:t.jsx("animateTransform",{attributeName:"transform",attributeType:"XML",type:"rotate",dur:"1s",from:"0 50 50",to:"-360 50 50",repeatCount:"indefinite"})}),t.jsx("path",{fill:d||s,d:"M82,35.7C74.1,18,53.4,10.1,35.7,18S10.1,46.6,18,64.3l7.6-3.4c-6-13.5,0-29.3,13.5-35.3s29.3,0,35.3,13.5 L82,35.7z",children:t.jsx("animateTransform",{attributeName:"transform",attributeType:"XML",type:"rotate",dur:"2s",from:"0 50 50",to:"360 50 50",repeatCount:"indefinite"})})]})}),O=b`
 to {
    stroke-dashoffset: 136;
  }
@@ -85,7 +85,6 @@ to {
 `,q=o.div`
   display: flex;
   justify-content: space-between;
-  /* gap: 64px; */
 `,G=o.div`
   display: flex;
   flex-direction: column;
@@ -120,38 +119,19 @@ to {
   line-height: 1.5;
   color: ${e=>e.theme.colors.textTitleColor};
 `,Q=o.div`
-  width: 888px;
-  height: 358px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 24px;
-`,Z=o.p`
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 1.2;
-  text-align: center;
-
-  color: ${e=>e.theme.colors.textColor};
-`,_=o.img`
-  width: 320px;
-  height: 320px;
-  object-fit: cover;
-`,ee=o.div`
   flex-shrink: 0;
-`,te=o.label`
+`,Z=o.label`
   display: flex;
   flex-direction: column;
   gap: 8px;
   width: 360px;
   margin-bottom: 32px;
-`,oe=o.span`
+`,_=o.span`
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   color: ${e=>e.theme.colors.inputsText};
-`,re=o.input`
+`,ee=o.input`
   font-weight: 400;
   font-size: 16px;
   line-height: 1.25;
@@ -174,9 +154,9 @@ to {
   &:focus {
     border: 1px solid ${e=>e.theme.colors.redColor};
   }
-`,ie=o.div`
+`,te=o.div`
   position: relative;
-`,ne=o(F)`
+`,oe=o(F)`
   position: absolute;
   top: 50%;
   left: 18px;
@@ -184,13 +164,13 @@ to {
   width: 18px;
   height: 20px;
   fill: ${e=>e.theme.colors.textTitleColor};
-`,se=o.p`
+`,re=o.p`
   margin-bottom: 14px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   color: ${e=>e.theme.colors.textColor};
-`,ae=o.h3`
+`,ie=o.h3`
   padding-bottom: 24px;
   margin-bottom: 24px;
   font-weight: 600;
@@ -198,9 +178,9 @@ to {
   line-height: 1.2;
   color: ${e=>e.theme.colors.textTitleColor};
   border-bottom: 1px solid ${e=>e.theme.colors.featuresBorderColor};
-`,le=o.form`
+`,se=o.form`
   margin-bottom: 64px;
-`,ce=o.div`
+`,ne=o.div`
   display: flex;
   align-items: center;
   gap: 10px;
@@ -253,7 +233,7 @@ to {
   &:focus {
     background-color: ${e=>e.theme.colors.hoverButtonColor};
   }
-`,de=o.div`
+`,ae=o.div`
   display: flex;
   justify-content: space-between;
-`,pe=()=>{const e=p(z),r=C(),[s,a]=y.useState(""),l=d=>r(k(d.target.value)),n=d=>{a(d.target.value)},c=()=>{r(v(s))},h=()=>{a(""),r(w())};return t.jsxs(ee,{children:[t.jsxs(te,{children:[t.jsx(oe,{children:"Location"}),t.jsxs(ie,{children:[t.jsx(re,{type:"text",name:"filter",placeholder:"Kyiv, Ukraine",value:e,onChange:l}),t.jsx(ne,{})]})]}),t.jsxs(le,{id:"typeVansForm",children:[t.jsx(se,{children:"Filters"}),t.jsx(ae,{children:"Vehicle type"}),t.jsxs(ce,{children:[t.jsxs(m,{checked:s==="panelTruck",style:{padding:"19px 30px"},children:[t.jsx(f,{type:"radio",name:"camperType",value:"panelTruck",onChange:n})," ",t.jsx(u,{children:t.jsx("use",{href:`${x}#icon-camper3`})}),t.jsx(g,{children:"Van"})]}),t.jsxs(m,{checked:s==="fullyIntegrated",children:[t.jsx(f,{type:"radio",name:"camperType",value:"fullyIntegrated",onChange:n})," ",t.jsx(u,{children:t.jsx("use",{href:`${x}#icon-camper2`})}),t.jsx(g,{children:"Fully Integrated"})]}),t.jsxs(m,{checked:s==="alcove",style:{padding:"19px 30px"},children:[t.jsx(f,{type:"radio",name:"camperType",value:"alcove",onChange:n})," ",t.jsx(u,{children:t.jsx("use",{href:`${x}#icon-camper1`})}),t.jsx(g,{children:"Alcove"})]})]})]}),t.jsxs(de,{children:[t.jsx($,{onClick:c,children:"Search"}),t.jsx($,{onClick:h,style:{padding:"16px 40px"},children:"Reset filters"})]})]})},fe=()=>{const e=C(),r=p(I),s=p(B),a=p(N),l=p(M),n=s.length%4===0;return y.useEffect(()=>{e(T(r))},[e,r]),t.jsxs(Y,{children:[t.jsx(J,{children:"Catalog"}),a?t.jsx(U,{}):t.jsx(t.Fragment,{children:t.jsxs(q,{children:[t.jsx(pe,{}),l.length!==0?t.jsxs(G,{children:[t.jsx("ul",{children:l.map(c=>t.jsx(S,{camper:c},c.id))}),n&&t.jsx(H,{type:"button",onClick:()=>e(L()),children:"Load more"})]}):t.jsxs(Q,{children:[t.jsx(Z,{children:"No campers matching the filters"}),t.jsx(_,{src:P,alt:"van"})]})]})})]})};export{fe as default};
+`,le=()=>{const e=p(z),r=C(),[n,a]=y.useState(""),l=d=>r(k(d.target.value)),s=d=>{a(d.target.value)},c=()=>{r(v(n))},h=()=>{a(""),r(w())};return t.jsxs(Q,{children:[t.jsxs(Z,{children:[t.jsx(_,{children:"Location"}),t.jsxs(te,{children:[t.jsx(ee,{type:"text",name:"filter",placeholder:"Kyiv, Ukraine",value:e,onChange:l}),t.jsx(oe,{})]})]}),t.jsxs(se,{id:"typeVansForm",children:[t.jsx(re,{children:"Filters"}),t.jsx(ie,{children:"Vehicle type"}),t.jsxs(ne,{children:[t.jsxs(m,{checked:n==="panelTruck",style:{padding:"19px 30px"},children:[t.jsx(f,{type:"radio",name:"camperType",value:"panelTruck",onChange:s})," ",t.jsx(u,{children:t.jsx("use",{href:`${x}#icon-camper3`})}),t.jsx(g,{children:"Van"})]}),t.jsxs(m,{checked:n==="fullyIntegrated",children:[t.jsx(f,{type:"radio",name:"camperType",value:"fullyIntegrated",onChange:s})," ",t.jsx(u,{children:t.jsx("use",{href:`${x}#icon-camper2`})}),t.jsx(g,{children:"Fully Integrated"})]}),t.jsxs(m,{checked:n==="alcove",style:{padding:"19px 30px"},children:[t.jsx(f,{type:"radio",name:"camperType",value:"alcove",onChange:s})," ",t.jsx(u,{children:t.jsx("use",{href:`${x}#icon-camper1`})}),t.jsx(g,{children:"Alcove"})]})]})]}),t.jsxs(ae,{children:[t.jsx($,{onClick:c,children:"Search"}),t.jsx($,{onClick:h,style:{padding:"16px 40px"},children:"Reset filters"})]})]})},he=()=>{const e=C(),r=p(B),n=p(I),a=p(M),l=p(N),s=n.length%4===0;return y.useEffect(()=>{e(T(r))},[e,r]),t.jsxs(Y,{children:[t.jsx(J,{children:"Catalog"}),a?t.jsx(U,{}):t.jsx(t.Fragment,{children:t.jsxs(q,{children:[t.jsx(le,{}),l.length!==0?t.jsxs(G,{children:[t.jsx("ul",{children:l.map(c=>t.jsx(S,{camper:c},c.id))}),s&&t.jsx(H,{type:"button",onClick:()=>e(L()),children:"Load more"})]}):t.jsx(P,{text:"No campers matching the filters",styles:{width:"888px",height:"358px"}})]})})]})};export{he as default};
