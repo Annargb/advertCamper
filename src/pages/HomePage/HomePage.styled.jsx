@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 
 export const HomeBgImg = styled.div`
   flex-shrink: 0;
-  width: 640px;
-  height: 640px;
+  width: 630px;
+  height: 630px;
   background-repeat: no-repeat;
   background-position: left;
   background-size: cover;
@@ -17,7 +17,7 @@ export const HomeWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 40px;
+  gap: 60px;
 `;
 
 export const HomeSlogan = styled.h1`
