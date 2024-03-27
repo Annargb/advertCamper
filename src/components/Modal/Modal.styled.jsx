@@ -9,6 +9,10 @@ export const CloseButton = styled.button`
   border: none;
 `;
 
+export const TitleModalConntainer = styled.div`
+  padding-right: 24px;
+`;
+
 export const ModalTitleWrapper = styled.div`
   display: flex;
   justify-content: space-between;
@@ -26,21 +30,14 @@ export const ModalCamperTitle = styled.h2`
 export const CamperSubtitleModalWrapper = styled.div`
   display: flex;
   align-items: center;
-  gap: 16px;
   margin-bottom: 16px;
-`;
-
-export const SubtitleModalWrapper = styled.div`
-  display: flex;
-  gap: 4px;
-  align-items: baseline;
-  justify-content: center;
 `;
 
 export const StarIcon = styled(GoStarFill)`
   fill: ${(p) => p.theme.colors.yellowColor};
   width: 16px;
   height: 16px;
+  margin-right: 4px;
 `;
 
 export const CamperSubtitleModalText = styled.p`
@@ -55,6 +52,7 @@ export const LocationIcon = styled(CiLocationOn)`
   stroke: ${(p) => p.theme.colors.textTitleColor};
   width: 16px;
   height: 16px;
+  margin-right: 4px;
 `;
 
 export const ModalPrice = styled.p`
@@ -112,8 +110,26 @@ export const TabButton = styled.button`
   border-color: ${(p) => p.theme.colors.redColor};
 `;
 
-export const OverflowContainer = styled.div`
+export const OverflowScrollbarWrapper = styled.div`
+  overflow-y: auto;
   height: 498px;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 264px;
+  }
+
+  &::-webkit-scrollbar-track {
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: ${(p) => p.theme.colors.scrollColor};
+    border-radius: 7px;
+  }
+`;
+
+export const OverflowContainer = styled.div`
+  padding-right: 24px;
 `;
 
 export const CloseIcon = styled(IoMdClose)`

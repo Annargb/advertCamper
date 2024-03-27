@@ -77,7 +77,7 @@ export const CamperCard = ({ camper }) => {
         <c.CamperTitleWrapper>
           <c.CamperTitle>{camper.name}</c.CamperTitle>
           <c.PriceWrapper>
-            <c.CamperTitle>{`₴${camper.price}`}</c.CamperTitle>
+            <c.CamperTitle>{`€${camper.price.toFixed(2)}`}</c.CamperTitle>
             <c.ButtonFavoriteCamper
               type="button"
               onClick={() => handleClick(camper)}
@@ -87,19 +87,17 @@ export const CamperCard = ({ camper }) => {
           </c.PriceWrapper>
         </c.CamperTitleWrapper>
         <c.CamperSubtitleWrapper>
-          <c.SubtitleWrapper>
-            <c.StarIcon />
-            <c.CamperSubtitleText
-              style={{
-                textDecoration: 'underline',
-                textDecorationSkipInk: 'none',
-              }}
-            >{`${camper.rating}(${camper.reviews.length} Reviews)`}</c.CamperSubtitleText>
-          </c.SubtitleWrapper>
-          <c.SubtitleWrapper>
-            <c.LocationIcon />
-            <c.CamperSubtitleText>{camper.location}</c.CamperSubtitleText>
-          </c.SubtitleWrapper>
+          <c.StarIcon />
+          <c.CamperSubtitleText
+            style={{
+              textDecoration: 'underline',
+              textDecorationSkipInk: 'none',
+              textUnderlineOffset: '4px',
+              marginRight: '16px',
+            }}
+          >{`${camper.rating}(${camper.reviews.length} Reviews)`}</c.CamperSubtitleText>
+          <c.LocationIcon />
+          <c.CamperSubtitleText>{camper.location}</c.CamperSubtitleText>
         </c.CamperSubtitleWrapper>
         <c.CamperDescription>{camper.description}</c.CamperDescription>
         <CamperDetails camper={camper} />

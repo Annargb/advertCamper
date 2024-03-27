@@ -69,7 +69,7 @@ export const CamperSubtitleText = styled.p`
 export const CamperSubtitleWrapper = styled.div`
   display: flex;
   align-items: center;
-  gap: 16px;
+  /* gap: 16px; */
   margin-bottom: 24px;
 `;
 
@@ -129,19 +129,14 @@ export const StarIcon = styled(GoStarFill)`
   fill: ${(p) => p.theme.colors.yellowColor};
   width: 16px;
   height: 16px;
-`;
-
-export const SubtitleWrapper = styled.div`
-  display: flex;
-  gap: 4px;
-  align-items: baseline;
-  justify-content: center;
+  margin-right: 4px;
 `;
 
 export const LocationIcon = styled(CiLocationOn)`
   stroke: ${(p) => p.theme.colors.textTitleColor};
   width: 16px;
   height: 16px;
+  margin-right: 4px;
 `;
 
 export const Location = styled.svg`

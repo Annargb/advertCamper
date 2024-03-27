@@ -13,6 +13,7 @@ export const theme = {
     inputsColor: '#f7f7f7',
     inputsText: 'rgba(16, 24, 40, 0.6)',
     featuresBorderColor: 'rgba(16, 24, 40, 0.1)',
+    scrollColor: '#d9d9d9',
   },
 
   transition: 'cubic-bezier(0.175, 0.885, 0.32, 1.275)',

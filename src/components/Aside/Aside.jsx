@@ -38,7 +38,7 @@ export const Aside = () => {
           <c.LocationInput
             type="text"
             name="filter"
-            placeholder="Kyiv, Ukraine"
+            placeholder="City"
             value={locationFilter}
             onChange={changeLocationFilter}
           ></c.LocationInput>
