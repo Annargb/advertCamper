@@ -3,7 +3,6 @@ import 'modern-normalize';
 import InterRegular from '../fonts/Inter-Regular.ttf';
 import InterMedium from '../fonts/Inter-Medium.ttf';
 import InterSemiBold from '../fonts/Inter-SemiBold.ttf';
-import 'react-perfect-scrollbar/dist/css/styles.css';
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -83,29 +82,8 @@ input, textarea, select, button {
 }
 
 button {
-    cursor: pointer;
-    border: none;
-
+  cursor: pointer;
+  border: none;
   }
-
-.ps--active-x > .ps__rail-x {
-  display: none; 
-}
-
-.ps__thumb-x {
- display: none;
-}
-
-.ps__rail-y {
-  border-radius: 7px; 
-   right: -18px;
-}
-
-.ps__thumb-y {
-  position: absolute;
-  width: 8px; 
-  background: #d9d9d9; 
-  height: 264px; 
-}
-
+  
 `;
