@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { GoStarFill } from 'react-icons/go';
 import { CiLocationOn } from 'react-icons/ci';
 import { IoMdClose } from 'react-icons/io';
@@ -98,6 +98,7 @@ export const BottomModalContainer = styled.div`
 `;
 
 export const TabButton = styled.button`
+  position: relative;
   font-weight: 600;
   font-size: 20px;
   line-height: 1.2;
@@ -106,8 +107,23 @@ export const TabButton = styled.button`
   padding: 0;
   border: 0;
   padding-bottom: 24px;
-  border-bottom: ${(p) => (p.$active ? '5px solid' : 'none')};
-  border-color: ${(p) => p.theme.colors.redColor};
+  /* border-bottom: ${(p) => (p.$active ? '5px solid' : 'none')}; */
+  /* border-color: ${(p) => p.theme.colors.redColor}; */
+
+  ${(p) =>
+    p.$active &&
+    css`
+      &::after {
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        content: '';
+        display: block;
+        width: 100%;
+        height: 5px;
+        background-color: ${(p) => p.theme.colors.redColor};
+      }
+    `}
 `;
 
 export const OverflowScrollbarWrapper = styled.div`
@@ -129,7 +145,7 @@ export const OverflowScrollbarWrapper = styled.div`
 `;
 
 export const OverflowContainer = styled.div`
-  padding-right: 24px;
+  padding-right: 16px;
 `;
 
 export const CloseIcon = styled(IoMdClose)`
