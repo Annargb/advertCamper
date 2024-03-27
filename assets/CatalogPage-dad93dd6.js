@@ -1,4 +1,4 @@
-import{u as o,h as b,j as t,a as p,b as C,r as y,c as k,d as v,e as w,f as T,g as L}from"./index-2207ecfc.js";import{C as F,s as z,i as x,a as B,b as I,c as M,d as N,e as S,N as P}from"./NotFound-44923ec0.js";import"./van1-33f09857.js";const V="#4fa94d",W={"aria-busy":!0,role:"progressbar"},A=o.div`
+import{u as o,h as b,j as t,a as p,b as C,r as y,c as k,d as v,e as w,f as T,g as L}from"./index-bf12aa45.js";import{C as F,s as z,i as x,a as B,b as I,c as M,d as N,e as S,N as P}from"./NotFound-abb1dc96.js";import"./van1-33f09857.js";const V="#4fa94d",W={"aria-busy":!0,role:"progressbar"},A=o.div`
   display: ${e=>e.$visible?"flex":"none"};
 `,E="http://www.w3.org/2000/svg",i=242.776657104492,R=1.6,X=b`
 12.5% {
@@ -71,26 +71,26 @@ to {
   &:nth-child(12n + 11) {
     stroke-opacity: 0.92;
   }
-`;const K=({wrapperStyle:e={},visible:r=!0,wrapperClass:n="",height:a=100,width:l=100,color:s=V,ariaLabel:c="three-circles-loading",outerCircleColor:h,innerCircleColor:d,middleCircleColor:j})=>t.jsx(A,{style:e,$visible:r,className:n,"data-testid":"three-circles-wrapper","aria-label":c,...W,children:t.jsxs("svg",{version:"1.1",height:`${a}`,width:`${l}`,xmlns:E,viewBox:"0 0 100 100",enableBackground:"new 0 0 100 100",xmlSpace:"preserve","data-testid":"three-circles-svg",children:[t.jsx("path",{fill:h||s,d:"M31.6,3.5C5.9,13.6-6.6,42.7,3.5,68.4c10.1,25.7,39.2,38.3,64.9,28.1l-3.1-7.9c-21.3,8.4-45.4-2-53.8-23.3 c-8.4-21.3,2-45.4,23.3-53.8L31.6,3.5z",children:t.jsx("animateTransform",{attributeName:"transform",attributeType:"XML",type:"rotate",dur:"2s",from:"0 50 50",to:"360 50 50",repeatCount:"indefinite"})}),t.jsx("path",{fill:j||s,d:"M42.3,39.6c5.7-4.3,13.9-3.1,18.1,2.7c4.3,5.7,3.1,13.9-2.7,18.1l4.1,5.5c8.8-6.5,10.6-19,4.1-27.7 c-6.5-8.8-19-10.6-27.7-4.1L42.3,39.6z",children:t.jsx("animateTransform",{attributeName:"transform",attributeType:"XML",type:"rotate",dur:"1s",from:"0 50 50",to:"-360 50 50",repeatCount:"indefinite"})}),t.jsx("path",{fill:d||s,d:"M82,35.7C74.1,18,53.4,10.1,35.7,18S10.1,46.6,18,64.3l7.6-3.4c-6-13.5,0-29.3,13.5-35.3s29.3,0,35.3,13.5 L82,35.7z",children:t.jsx("animateTransform",{attributeName:"transform",attributeType:"XML",type:"rotate",dur:"2s",from:"0 50 50",to:"360 50 50",repeatCount:"indefinite"})})]})}),O=b`
+`;const O=({wrapperStyle:e={},visible:r=!0,wrapperClass:n="",height:a=100,width:l=100,color:s=V,ariaLabel:c="three-circles-loading",outerCircleColor:h,innerCircleColor:d,middleCircleColor:j})=>t.jsx(A,{style:e,$visible:r,className:n,"data-testid":"three-circles-wrapper","aria-label":c,...W,children:t.jsxs("svg",{version:"1.1",height:`${a}`,width:`${l}`,xmlns:E,viewBox:"0 0 100 100",enableBackground:"new 0 0 100 100",xmlSpace:"preserve","data-testid":"three-circles-svg",children:[t.jsx("path",{fill:h||s,d:"M31.6,3.5C5.9,13.6-6.6,42.7,3.5,68.4c10.1,25.7,39.2,38.3,64.9,28.1l-3.1-7.9c-21.3,8.4-45.4-2-53.8-23.3 c-8.4-21.3,2-45.4,23.3-53.8L31.6,3.5z",children:t.jsx("animateTransform",{attributeName:"transform",attributeType:"XML",type:"rotate",dur:"2s",from:"0 50 50",to:"360 50 50",repeatCount:"indefinite"})}),t.jsx("path",{fill:j||s,d:"M42.3,39.6c5.7-4.3,13.9-3.1,18.1,2.7c4.3,5.7,3.1,13.9-2.7,18.1l4.1,5.5c8.8-6.5,10.6-19,4.1-27.7 c-6.5-8.8-19-10.6-27.7-4.1L42.3,39.6z",children:t.jsx("animateTransform",{attributeName:"transform",attributeType:"XML",type:"rotate",dur:"1s",from:"0 50 50",to:"-360 50 50",repeatCount:"indefinite"})}),t.jsx("path",{fill:d||s,d:"M82,35.7C74.1,18,53.4,10.1,35.7,18S10.1,46.6,18,64.3l7.6-3.4c-6-13.5,0-29.3,13.5-35.3s29.3,0,35.3,13.5 L82,35.7z",children:t.jsx("animateTransform",{attributeName:"transform",attributeType:"XML",type:"rotate",dur:"2s",from:"0 50 50",to:"360 50 50",repeatCount:"indefinite"})})]})}),Y=b`
 to {
    stroke-dashoffset: 136;
  }
 `;o.polygon`
   stroke-dasharray: 17;
-  animation: ${O} 2.5s cubic-bezier(0.35, 0.04, 0.63, 0.95) infinite;
+  animation: ${Y} 2.5s cubic-bezier(0.35, 0.04, 0.63, 0.95) infinite;
 `;o.svg`
   transform-origin: 50% 65%;
-`;const U=()=>t.jsx(K,{height:"100",width:"100",color:"#d84343",wrapperStyle:{position:"absolute",top:"50%",left:"50%",margin:"auto"},visible:!0,ariaLabel:"three-circles-rotating"}),Y=o.div`
+`;const q=()=>t.jsx(O,{height:"100",width:"100",color:"#d84343",wrapperStyle:{position:"absolute",top:"50%",left:"50%",margin:"auto"},visible:!0,ariaLabel:"three-circles-rotating"}),G=o.div`
   padding-bottom: 100px;
-`,q=o.div`
+`,H=o.div`
   display: flex;
   justify-content: space-between;
-`,G=o.div`
+`,J=o.div`
   display: flex;
   flex-direction: column;
   gap: 50px;
   align-items: center;
-`,H=o.button`
+`,K=o.button`
   border: 1px solid;
   border-color: ${e=>e.theme.colors.buttonBorderColor};
   background-color: ${e=>e.theme.colors.whiteColor};
@@ -111,14 +111,14 @@ to {
   &:focus {
     border-color: ${e=>e.theme.colors.redColor};
   }
-`,J=o.h1`
+`,Q=o.h1`
   margin-top: 24px;
   margin-bottom: 44px;
   font-weight: 600;
   font-size: 28px;
   line-height: 1.5;
   color: ${e=>e.theme.colors.textTitleColor};
-`,Q=o.div`
+`,U=o.div`
   flex-shrink: 0;
 `,Z=o.label`
   display: flex;
@@ -236,4 +236,4 @@ to {
 `,ae=o.div`
   display: flex;
   justify-content: space-between;
-`,le=()=>{const e=p(z),r=C(),[n,a]=y.useState(""),l=d=>r(k(d.target.value)),s=d=>{a(d.target.value)},c=()=>{r(v(n))},h=()=>{a(""),r(w())};return t.jsxs(Q,{children:[t.jsxs(Z,{children:[t.jsx(_,{children:"Location"}),t.jsxs(te,{children:[t.jsx(ee,{type:"text",name:"filter",placeholder:"Kyiv, Ukraine",value:e,onChange:l}),t.jsx(oe,{})]})]}),t.jsxs(se,{id:"typeVansForm",children:[t.jsx(re,{children:"Filters"}),t.jsx(ie,{children:"Vehicle type"}),t.jsxs(ne,{children:[t.jsxs(m,{checked:n==="panelTruck",style:{padding:"19px 30px"},children:[t.jsx(f,{type:"radio",name:"camperType",value:"panelTruck",onChange:s})," ",t.jsx(u,{children:t.jsx("use",{href:`${x}#icon-camper3`})}),t.jsx(g,{children:"Van"})]}),t.jsxs(m,{checked:n==="fullyIntegrated",children:[t.jsx(f,{type:"radio",name:"camperType",value:"fullyIntegrated",onChange:s})," ",t.jsx(u,{children:t.jsx("use",{href:`${x}#icon-camper2`})}),t.jsx(g,{children:"Fully Integrated"})]}),t.jsxs(m,{checked:n==="alcove",style:{padding:"19px 30px"},children:[t.jsx(f,{type:"radio",name:"camperType",value:"alcove",onChange:s})," ",t.jsx(u,{children:t.jsx("use",{href:`${x}#icon-camper1`})}),t.jsx(g,{children:"Alcove"})]})]})]}),t.jsxs(ae,{children:[t.jsx($,{onClick:c,children:"Search"}),t.jsx($,{onClick:h,style:{padding:"16px 40px"},children:"Reset filters"})]})]})},he=()=>{const e=C(),r=p(B),n=p(I),a=p(M),l=p(N),s=n.length%4===0;return y.useEffect(()=>{e(T(r))},[e,r]),t.jsxs(Y,{children:[t.jsx(J,{children:"Catalog"}),a?t.jsx(U,{}):t.jsx(t.Fragment,{children:t.jsxs(q,{children:[t.jsx(le,{}),l.length!==0?t.jsxs(G,{children:[t.jsx("ul",{children:l.map(c=>t.jsx(S,{camper:c},c.id))}),s&&t.jsx(H,{type:"button",onClick:()=>e(L()),children:"Load more"})]}):t.jsx(P,{text:"No campers matching the filters",styles:{width:"888px",height:"358px"}})]})})]})};export{he as default};
+`,le=()=>{const e=p(z),r=C(),[n,a]=y.useState(""),l=d=>r(k(d.target.value)),s=d=>{a(d.target.value)},c=()=>{r(v(n))},h=()=>{a(""),r(w())};return t.jsxs(U,{children:[t.jsxs(Z,{children:[t.jsx(_,{children:"Location"}),t.jsxs(te,{children:[t.jsx(ee,{type:"text",name:"filter",placeholder:"City",value:e,onChange:l}),t.jsx(oe,{})]})]}),t.jsxs(se,{id:"typeVansForm",children:[t.jsx(re,{children:"Filters"}),t.jsx(ie,{children:"Vehicle type"}),t.jsxs(ne,{children:[t.jsxs(m,{checked:n==="panelTruck",style:{padding:"19px 30px"},children:[t.jsx(f,{type:"radio",name:"camperType",value:"panelTruck",onChange:s})," ",t.jsx(u,{children:t.jsx("use",{href:`${x}#icon-camper3`})}),t.jsx(g,{children:"Van"})]}),t.jsxs(m,{checked:n==="fullyIntegrated",children:[t.jsx(f,{type:"radio",name:"camperType",value:"fullyIntegrated",onChange:s})," ",t.jsx(u,{children:t.jsx("use",{href:`${x}#icon-camper2`})}),t.jsx(g,{children:"Fully Integrated"})]}),t.jsxs(m,{checked:n==="alcove",style:{padding:"19px 30px"},children:[t.jsx(f,{type:"radio",name:"camperType",value:"alcove",onChange:s})," ",t.jsx(u,{children:t.jsx("use",{href:`${x}#icon-camper1`})}),t.jsx(g,{children:"Alcove"})]})]})]}),t.jsxs(ae,{children:[t.jsx($,{onClick:c,children:"Search"}),t.jsx($,{onClick:h,style:{padding:"16px 40px"},children:"Reset filters"})]})]})},he=()=>{const e=C(),r=p(B),n=p(I),a=p(M),l=p(N),s=n.length%4===0;return y.useEffect(()=>{e(T(r))},[e,r]),t.jsxs(G,{children:[t.jsx(Q,{children:"Catalog"}),a?t.jsx(q,{}):t.jsx(t.Fragment,{children:t.jsxs(H,{children:[t.jsx(le,{}),l.length!==0?t.jsxs(J,{children:[t.jsx("ul",{children:l.map(c=>t.jsx(S,{camper:c},c.id))}),s&&t.jsx(K,{type:"button",onClick:()=>e(L()),children:"Load more"})]}):t.jsx(P,{text:"No campers matching the filters",styles:{width:"888px",height:"358px"}})]})})]})};export{he as default};
