@@ -4,7 +4,6 @@ import {
   TbToolsKitchen2,
   TbAirConditioning,
   TbRadio,
-  TbMicrowave,
   TbToiletPaper,
 } from 'react-icons/tb';
 import { IoBedOutline, IoWaterOutline } from 'react-icons/io5';
@@ -70,7 +69,9 @@ export const Features = ({ camper }) => {
         )}
         {camper.details.hob !== 0 && (
           <c.DetailsItems>
-            <TbMicrowave style={{ width: '20', height: '20' }} />
+            <c.FeatureIcon>
+              <use href={`${icons}#icon-hob`} />
+            </c.FeatureIcon>
             <c.DetailsText>{`${camper.details.hob} hob`}</c.DetailsText>
           </c.DetailsItems>
         )}

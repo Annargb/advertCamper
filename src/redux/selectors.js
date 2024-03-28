@@ -4,6 +4,9 @@ export const selectCatalogItems = (state) => state.catalog.catalogItems;
 export const selectCatalogIsLoading = (state) => state.catalog.isLoading;
 export const selectCurrentPage = (state) => state.catalog.currentPage;
 export const selectFavorites = (state) => state.catalog.favorites;
+export const selectVisibleButton = (state) => state.catalog.visibleButton;
+export const selectVisibleButtonInFilters = (state) =>
+  state.filter.selectVisibleButtonInFilters;
 export const selectLocationFilter = (state) => state.filter.location;
 export const selectVanType = (state) => state.filter.vanType;
 

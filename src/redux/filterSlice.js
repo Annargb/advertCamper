@@ -15,6 +15,7 @@ export const filterSlice = createSlice({
     },
     resetFilters(state) {
       state.vanType = '';
+      state.location = '';
     },
   },
 });

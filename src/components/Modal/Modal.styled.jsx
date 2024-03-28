@@ -1,6 +1,5 @@
 import styled, { css } from 'styled-components';
 import { GoStarFill } from 'react-icons/go';
-import { CiLocationOn } from 'react-icons/ci';
 import { IoMdClose } from 'react-icons/io';
 
 export const CloseButton = styled.button`
@@ -46,13 +45,6 @@ export const CamperSubtitleModalText = styled.p`
   font-size: 16px;
   line-height: 1.5;
   color: ${(p) => p.theme.colors.textTitleColor};
-`;
-
-export const LocationIcon = styled(CiLocationOn)`
-  stroke: ${(p) => p.theme.colors.textTitleColor};
-  width: 16px;
-  height: 16px;
-  margin-right: 4px;
 `;
 
 export const ModalPrice = styled.p`
@@ -107,8 +99,6 @@ export const TabButton = styled.button`
   padding: 0;
   border: 0;
   padding-bottom: 24px;
-  /* border-bottom: ${(p) => (p.$active ? '5px solid' : 'none')}; */
-  /* border-color: ${(p) => p.theme.colors.redColor}; */
 
   ${(p) =>
     p.$active &&

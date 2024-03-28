@@ -4,6 +4,7 @@ import { CamperDetails } from '../CamperDetails/CamperDetails';
 import { CamperModal } from '../Modal/Modal';
 import { useDispatch } from 'react-redux';
 import { updateFavorites } from '../../redux/catalogSlice';
+import { CommonIcon } from '../CommonIcon/CommonIcon';
 
 export const CamperCard = ({ camper }) => {
   const dispatch = useDispatch();
@@ -96,7 +97,7 @@ export const CamperCard = ({ camper }) => {
               marginRight: '16px',
             }}
           >{`${camper.rating}(${camper.reviews.length} Reviews)`}</c.CamperSubtitleText>
-          <c.LocationIcon />
+          <CommonIcon name="icon-map-pin" size="16px" margin="4px" />
           <c.CamperSubtitleText>{camper.location}</c.CamperSubtitleText>
         </c.CamperSubtitleWrapper>
         <c.CamperDescription>{camper.description}</c.CamperDescription>

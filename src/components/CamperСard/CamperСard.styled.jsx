@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { FaRegHeart } from 'react-icons/fa6';
 import { GoStarFill } from 'react-icons/go';
-import { CiLocationOn } from 'react-icons/ci';
 import { FaHeart } from 'react-icons/fa';
 
 export const CardWrapper = styled.li`
@@ -69,7 +68,6 @@ export const CamperSubtitleText = styled.p`
 export const CamperSubtitleWrapper = styled.div`
   display: flex;
   align-items: center;
-  /* gap: 16px; */
   margin-bottom: 24px;
 `;
 
@@ -130,19 +128,6 @@ export const StarIcon = styled(GoStarFill)`
   width: 16px;
   height: 16px;
   margin-right: 4px;
-`;
-
-export const LocationIcon = styled(CiLocationOn)`
-  stroke: ${(p) => p.theme.colors.textTitleColor};
-  width: 16px;
-  height: 16px;
-  margin-right: 4px;
-`;
-
-export const Location = styled.svg`
-  fill: ${(p) => p.theme.colors.textTitleColor};
-  width: 16px;
-  height: 16px;
 `;
 
 export const ButtonFavoriteCamper = styled.button`

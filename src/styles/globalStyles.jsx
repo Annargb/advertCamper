@@ -8,7 +8,7 @@ export const GlobalStyle = createGlobalStyle`
 
 
     @font-face {
-        font-family: 'InterRegular';
+        font-family: 'Inter';
         src: local('InterRegular'),
         url(${InterRegular}) format('truetype');
         font-weight: 400;
@@ -16,7 +16,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     @font-face {
-        font-family: 'InterMedium';
+        font-family: 'Inter';
         src: local('InterMedium'),
         url(${InterMedium}) format('truetype');
         font-weight: 500;
@@ -24,7 +24,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     @font-face {
-        font-family: 'InterSemiBold';
+        font-family: 'Inter';
         src: local('InterSemiBold'),
         url(${InterSemiBold}) format('truetype');
         font-weight: 600;

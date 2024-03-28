@@ -4,6 +4,7 @@ import { Rewiews } from '../Rewiews/Rewiews';
 import { BookForm } from '../BookForm/BookForm';
 import { Features } from '../Features/Features';
 import * as c from './Modal.styled';
+import { CommonIcon } from '../CommonIcon/CommonIcon';
 
 const customStyles = {
   overlay: {
@@ -59,7 +60,7 @@ export const CamperModal = ({ isModalOpen, closeModal, camper }) => {
                 marginRight: '16px',
               }}
             >{`${camper.rating}(${camper.reviews.length} Reviews)`}</c.CamperSubtitleModalText>
-            <c.LocationIcon />
+            <CommonIcon name="icon-map-pin" size="16px" margin="4px" />
             <c.CamperSubtitleModalText>
               {camper.location}
             </c.CamperSubtitleModalText>

@@ -22,7 +22,6 @@ export const LoadMoreButton = styled.button`
   background-color: ${(p) => p.theme.colors.whiteColor};
   border-radius: 200px;
   padding: 16px 32px;
-  width: 145px;
   height: 56px;
   font-weight: 500;
   font-size: 16px;

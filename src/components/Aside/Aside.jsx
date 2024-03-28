@@ -6,6 +6,7 @@ import {
   updateVanType,
   resetFilters,
 } from '../../redux/filterSlice';
+import { showButton, hideButton } from '../../redux/catalogSlice';
 import * as c from './Aside.styled';
 import icons from '../../images/icons.svg';
 
@@ -15,7 +16,7 @@ export const Aside = () => {
   const [carType, setCarType] = useState('');
 
   const changeLocationFilter = (event) =>
-    dispatch(updateLocationFilter(event.target.value));
+    dispatch(updateLocationFilter(event.target.value.trim()));
 
   const changeCarType = (event) => {
     setCarType(event.target.value);
@@ -23,11 +24,13 @@ export const Aside = () => {
 
   const applyFilters = () => {
     dispatch(updateVanType(carType));
+    dispatch(hideButton());
   };
 
   const handleResetFilters = () => {
     setCarType('');
     dispatch(resetFilters());
+    dispatch(showButton());
   };
 
   return (

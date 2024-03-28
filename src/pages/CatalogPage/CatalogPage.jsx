@@ -4,12 +4,13 @@ import { CamperCard } from '../../components/CamperСard/CamperСard';
 import { Loader } from '../../components/Loader/Loader';
 import { fetchCatalog } from '../../redux/operations';
 import {
-  selectCatalogItems,
   selectCurrentPage,
   selectCatalogIsLoading,
   selectFilteredCampers,
+  selectVisibleButton,
 } from '../../redux/selectors';
 import { updateCurrentPage } from '../../redux/catalogSlice';
+import { resetFilters } from '../../redux/filterSlice';
 import * as c from './CatalogPage.styled';
 import { Aside } from '../../components/Aside/Aside';
 import { NotFound } from '../../components/NotFound/NotFound';
@@ -17,25 +18,26 @@ import { NotFound } from '../../components/NotFound/NotFound';
 const CatalogPage = () => {
   const dispatch = useDispatch();
   const currentPage = useSelector(selectCurrentPage);
-  const catalogItems = useSelector(selectCatalogItems);
+
   const isLoading = useSelector(selectCatalogIsLoading);
   const filteredCampers = useSelector(selectFilteredCampers);
-  const isVisibleButton = catalogItems.length % 4 === 0;
+  const isVisibleButton = useSelector(selectVisibleButton);
 
   useEffect(() => {
     dispatch(fetchCatalog(currentPage));
+    dispatch(resetFilters());
   }, [dispatch, currentPage]);
 
   return (
     <c.CatalogPageContainer>
       <c.CatalogTitle>Catalog</c.CatalogTitle>
-      {isLoading ? (
-        <Loader />
-      ) : (
-        <>
-          <c.CatalogWrapper>
-            <Aside />
-            {filteredCampers.length !== 0 ? (
+      <c.CatalogWrapper>
+        <Aside />
+        {isLoading ? (
+          <Loader />
+        ) : (
+          <>
+            {filteredCampers.length !== 0 && !isLoading ? (
               <c.CamperListContainer>
                 <ul>
                   {filteredCampers.map((item) => (
@@ -52,14 +54,16 @@ const CatalogPage = () => {
                 )}
               </c.CamperListContainer>
             ) : (
-              <NotFound
-                text="No campers matching the filters"
-                styles={{ width: '888px', height: '358px' }}
-              />
+              !isLoading && (
+                <NotFound
+                  text="No campers matching the filters"
+                  styles={{ width: '888px', height: '358px' }}
+                />
+              )
             )}
-          </c.CatalogWrapper>
-        </>
-      )}
+          </>
+        )}
+      </c.CatalogWrapper>
     </c.CatalogPageContainer>
   );
 };
