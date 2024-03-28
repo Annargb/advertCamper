@@ -1,4 +1,4 @@
-import{u as s,a as r,b as i,r as n,i as c,j as e}from"./index-5a37d458.js";import{f as l,N as m,e as p}from"./NotFound-f7eed3f2.js";import"./van1-33f09857.js";const d=s.div`
+import{u as s,a as r,b as i,r as n,k as c,j as e}from"./index-a8e1b975.js";import{e as l,N as m,C as p}from"./NotFound-17fcfff6.js";import"./van1-33f09857.js";const d=s.div`
   padding-bottom: 100px;
 `,x=s.ul`
   display: flex;
