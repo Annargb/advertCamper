@@ -84,6 +84,7 @@ input, textarea, select, button {
 button {
   cursor: pointer;
   border: none;
+  outline: none;
   }
   
 `;

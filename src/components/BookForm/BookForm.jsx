@@ -1,8 +1,8 @@
 import { Formik, Form } from 'formik';
 import * as c from './BookForm.styled';
-// import DatePicker from 'react-datepicker';
-import 'react-datepicker/dist/react-datepicker.css';
+// import 'react-datepicker/dist/react-datepicker.css';
 import * as Yup from 'yup';
+import { CommonIcon } from '../CommonIcon/CommonIcon';
 
 const emailPattern = /^[a-z0-9._%+-]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+$/;
 
@@ -59,7 +59,7 @@ export const BookForm = () => {
                 <c.ErrorMessage name="email" component="span" required />
               </c.FormGroup>
 
-              <c.FormGroup>
+              <c.FormGroup style={{ position: 'relative' }}>
                 <c.StyledDataPicker
                   name="bookingDate"
                   placeholderText="Booking date"
@@ -67,7 +67,17 @@ export const BookForm = () => {
                   selected={values.bookingDate}
                   onChange={(date) => setFieldValue('bookingDate', date)}
                   formatWeekDay={(day) => day.substr(0, 3)}
+                  minDate={Date.now()}
                 />
+                <CommonIcon
+                  name="icon-calendar"
+                  size="20px"
+                  position="absolute"
+                  right="18px"
+                  top="18px"
+                  cursor="pointer"
+                />
+                <c.CalendarGlobalStyles />
                 <c.ErrorMessage name="bookingDate" component="span" required />
               </c.FormGroup>
 
