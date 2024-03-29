@@ -272,7 +272,7 @@ to {
   width: 100%;
   height: 100vh;
   background-color: ${e=>e.theme.colors.whiteColor};
-`,Gf=_.lazy(()=>Ya(()=>import("./HomePage-79f44f58.js"),["assets/HomePage-79f44f58.js","assets/van1-33f09857.js"])),Uw=_.lazy(()=>Ya(()=>import("./CatalogPage-dac566f4.js"),["assets/CatalogPage-dac566f4.js","assets/NotFound-b9207ad7.js","assets/van1-33f09857.js","assets/NotFound-b8d97615.css"])),Bw=_.lazy(()=>Ya(()=>import("./FavoritePage-e22a9e02.js"),["assets/FavoritePage-e22a9e02.js","assets/NotFound-b9207ad7.js","assets/van1-33f09857.js","assets/NotFound-b8d97615.css"]));function Ww(){return U.jsx(Fw,{children:U.jsx(_0,{children:U.jsxs(Dn,{path:"/",element:U.jsx(Mw,{}),children:[U.jsx(Dn,{index:!0,element:U.jsx(Gf,{})}),U.jsx(Dn,{path:"catalog",element:U.jsx(Uw,{})}),U.jsx(Dn,{path:"favorites",element:U.jsx(Bw,{})}),U.jsx(Dn,{path:"*",element:U.jsx(Gf,{})})]})})})}const Hw={colors:{whiteColor:"#fff",cardBorder:"rgba(16, 24, 40, 0.2)",textTitleColor:"#101828",textColor:"#475467",redColor:"#e44848",hoverButtonColor:"#d84343",yellowColor:"#ffc531",buttonBorderColor:"rgba(71, 84, 103, 0.2)",bgDetailsColor:"#f2f4f7",modalBgColor:"rgba(17, 18, 19, 0.4)",inputsColor:"#f7f7f7",inputsText:"rgba(16, 24, 40, 0.6)",featuresBorderColor:"rgba(16, 24, 40, 0.1)",scrollColor:"#d9d9d9"},transition:"cubic-bezier(0.175, 0.885, 0.32, 1.275)"},Vw="/advertCamper/assets/Inter-Regular-3127f0b8.ttf",bw="/advertCamper/assets/Inter-Medium-a645f554.ttf",Kw="/advertCamper/assets/Inter-SemiBold-b0b540e6.ttf",Qw=W1`
+`,Gf=_.lazy(()=>Ya(()=>import("./HomePage-51c5f89a.js"),["assets/HomePage-51c5f89a.js","assets/van1-33f09857.js"])),Uw=_.lazy(()=>Ya(()=>import("./CatalogPage-e389e7a5.js"),["assets/CatalogPage-e389e7a5.js","assets/NotFound-08a8f418.js","assets/van1-33f09857.js","assets/NotFound-b8d97615.css"])),Bw=_.lazy(()=>Ya(()=>import("./FavoritePage-8fd157c4.js"),["assets/FavoritePage-8fd157c4.js","assets/NotFound-08a8f418.js","assets/van1-33f09857.js","assets/NotFound-b8d97615.css"]));function Ww(){return U.jsx(Fw,{children:U.jsx(_0,{children:U.jsxs(Dn,{path:"/",element:U.jsx(Mw,{}),children:[U.jsx(Dn,{index:!0,element:U.jsx(Gf,{})}),U.jsx(Dn,{path:"catalog",element:U.jsx(Uw,{})}),U.jsx(Dn,{path:"favorites",element:U.jsx(Bw,{})}),U.jsx(Dn,{path:"*",element:U.jsx(Gf,{})})]})})})}const Hw={colors:{whiteColor:"#fff",cardBorder:"rgba(16, 24, 40, 0.2)",textTitleColor:"#101828",textColor:"#475467",redColor:"#e44848",hoverButtonColor:"#d84343",yellowColor:"#ffc531",buttonBorderColor:"rgba(71, 84, 103, 0.2)",bgDetailsColor:"#f2f4f7",modalBgColor:"rgba(17, 18, 19, 0.4)",inputsColor:"#f7f7f7",inputsText:"rgba(16, 24, 40, 0.6)",featuresBorderColor:"rgba(16, 24, 40, 0.1)",scrollColor:"#d9d9d9"},transition:"cubic-bezier(0.175, 0.885, 0.32, 1.275)"},Vw="/advertCamper/assets/Inter-Regular-3127f0b8.ttf",bw="/advertCamper/assets/Inter-Medium-a645f554.ttf",Kw="/advertCamper/assets/Inter-SemiBold-b0b540e6.ttf",Qw=W1`
 
 
     @font-face {
@@ -352,6 +352,7 @@ input, textarea, select, button {
 button {
   cursor: pointer;
   border: none;
+  outline: none;
   }
   
 `;var Sm={exports:{}},Em={};/**
