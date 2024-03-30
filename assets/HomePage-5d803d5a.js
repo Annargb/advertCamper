@@ -1,4 +1,4 @@
-import{u as t,L as r,j as o,C as n}from"./index-42a819e9.js";import{v as i}from"./van1-33f09857.js";const s=t.div`
+import{u as t,L as r,j as o,C as n}from"./index-78384643.js";import{v as i}from"./van1-33f09857.js";const s=t.div`
   flex-shrink: 0;
   width: 630px;
   height: 630px;
