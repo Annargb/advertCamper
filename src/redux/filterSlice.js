@@ -5,6 +5,13 @@ export const filterSlice = createSlice({
   initialState: {
     location: '',
     vanType: '',
+    equipment: {
+      airConditioner: false,
+      transmission: false,
+      kitchen: false,
+      TV: false,
+      showerToilet: false,
+    },
   },
   reducers: {
     updateLocationFilter(state, action) {
@@ -13,13 +20,27 @@ export const filterSlice = createSlice({
     updateVanType(state, action) {
       state.vanType = action.payload;
     },
+    updateEquipment(state, action) {
+      state.equipment = action.payload;
+    },
     resetFilters(state) {
-      state.vanType = '';
       state.location = '';
+      state.vanType = '';
+      state.equipment = {
+        airConditioner: false,
+        transmission: false,
+        kitchen: false,
+        TV: false,
+        showerToilet: false,
+      };
     },
   },
 });
 
-export const { updateLocationFilter, updateVanType, resetFilters } =
-  filterSlice.actions;
+export const {
+  updateLocationFilter,
+  updateVanType,
+  updateEquipment,
+  resetFilters,
+} = filterSlice.actions;
 export const filterReducer = filterSlice.reducer;

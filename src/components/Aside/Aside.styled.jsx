@@ -81,13 +81,13 @@ export const TypeForm = styled.form`
   margin-bottom: 64px;
 `;
 
-export const CheckboxWrapper = styled.div`
+export const RadioWrapper = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
 `;
 
-export const CustomCheckbox = styled.label`
+export const CustomRadio = styled.label`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -110,12 +110,12 @@ export const CustomCheckbox = styled.label`
   }
 `;
 
-export const CheckboxInput = styled.input`
+export const RadioInput = styled.input`
   opacity: 0;
   position: absolute;
 `;
 
-export const CheckboxText = styled.span`
+export const RadioText = styled.span`
   font-weight: 500;
   font-size: 16px;
   line-height: 1.25;
@@ -123,7 +123,7 @@ export const CheckboxText = styled.span`
   color: ${(p) => p.theme.colors.textTitleColor};
 `;
 
-export const CheckboxIcon = styled.svg`
+export const RadioIcon = styled.svg`
   width: 40px;
   height: 28px;
   flex-shrink: 0;

@@ -1,7 +1,7 @@
 import { Field as FormikField, ErrorMessage as FormikError } from 'formik';
-import styled, { createGlobalStyle } from 'styled-components';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+import styled, { createGlobalStyle } from 'styled-components';
 
 export const BookFormWrapper = styled.div`
   flex-shrink: 0;
@@ -221,7 +221,6 @@ export const CalendarGlobalStyles = createGlobalStyle`
     margin: 0;
     width: 24px;
     height: 24px;
-    /* width: 41px; */
     height: 22px;
     border-radius: 50%;
     color:  #101828;
@@ -235,8 +234,6 @@ export const CalendarGlobalStyles = createGlobalStyle`
   .sc-iLXxbI .react-datepicker__month {
     display: flex;
     gap: 11px;
-    /* row-gap: 6px; */
-    /* gap: 11px; */
     flex-direction: column;
     justify-content: space-between;
     margin: 0;
