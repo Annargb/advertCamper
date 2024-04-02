@@ -24,9 +24,9 @@ export const Aside = () => {
   const [checkedEquipment, setCheckedEquipment] = useState(equipmentFromState);
 
   const changeEquipmentFilter = (event) => {
-    const { name, checked } = event.target;
+    const { value, checked } = event.target;
     if (checked) {
-      setCheckedEquipment((prevState) => [...prevState, name]);
+      setCheckedEquipment((prevState) => [...prevState, value]);
     } else {
       setCheckedEquipment((prevState) =>
         prevState.filter((item) => item !== name)
@@ -35,9 +35,9 @@ export const Aside = () => {
   };
 
   const changeLocalTransmission = (event) => {
-    const { name, checked } = event.target;
+    const { value, checked } = event.target;
 
-    checked ? setTransmission(name) : setTransmission('');
+    checked ? setTransmission(value) : setTransmission('');
   };
 
   const changeLocationFilter = (event) =>
@@ -86,7 +86,8 @@ export const Aside = () => {
           <label>
             <input
               type="checkbox"
-              name="airConditioner"
+              name="equipment"
+              value="airConditioner"
               checked={checkedEquipment.includes('airConditioner')}
               onChange={changeEquipmentFilter}
             />
@@ -96,7 +97,8 @@ export const Aside = () => {
           <label>
             <input
               type="checkbox"
-              name="automatic"
+              name="equipment"
+              value="automatic"
               checked={transmission === 'automatic'}
               onChange={changeLocalTransmission}
             />
@@ -106,7 +108,8 @@ export const Aside = () => {
           <label>
             <input
               type="checkbox"
-              name="kitchen"
+              name="equipment"
+              value="kitchen"
               checked={checkedEquipment.includes('kitchen')}
               onChange={changeEquipmentFilter}
             />
@@ -116,7 +119,8 @@ export const Aside = () => {
           <label>
             <input
               type="checkbox"
-              name="TV"
+              name="equipment"
+              value="TV"
               checked={checkedEquipment.includes('TV')}
               onChange={changeEquipmentFilter}
             />
@@ -126,7 +130,8 @@ export const Aside = () => {
           <label>
             <input
               type="checkbox"
-              name="showerToilet"
+              name="equipment"
+              value="showerToilet"
               checked={checkedEquipment.includes('showerToilet')}
               onChange={changeEquipmentFilter}
             />
