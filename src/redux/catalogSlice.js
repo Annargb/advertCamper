@@ -18,7 +18,6 @@ export const catalogSlice = createSlice({
   name: 'catalogItems',
   initialState: {
     catalogItems: [],
-    visibleItems: [],
     currentPage: 1,
     favorites: [],
     visibleButton: true,

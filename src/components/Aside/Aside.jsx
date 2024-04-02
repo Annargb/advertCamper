@@ -1,10 +1,14 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectLocationFilter } from '../../redux/selectors';
+import {
+  selectLocationFilter,
+  selectCheckedEquipment,
+} from '../../redux/selectors';
 import {
   updateLocationFilter,
   updateVanType,
   updateEquipment,
+  changeTransmission,
   resetFilters,
 } from '../../redux/filterSlice';
 import { showButton, hideButton } from '../../redux/catalogSlice';
@@ -14,21 +18,26 @@ import icons from '../../images/icons.svg';
 export const Aside = () => {
   const locationFilter = useSelector(selectLocationFilter);
   const dispatch = useDispatch();
+  const [transmission, setTransmission] = useState('');
   const [carType, setCarType] = useState('');
-  const [equipment, setEquipment] = useState({
-    airConditioner: false,
-    automatic: false,
-    kitchen: false,
-    TV: false,
-    showerToilet: false,
-  });
+  const equipmentFromState = useSelector(selectCheckedEquipment);
+  const [checkedEquipment, setCheckedEquipment] = useState(equipmentFromState);
 
   const changeEquipmentFilter = (event) => {
     const { name, checked } = event.target;
-    setEquipment((prevState) => ({
-      ...prevState,
-      [name]: checked,
-    }));
+    if (checked) {
+      setCheckedEquipment((prevState) => [...prevState, name]);
+    } else {
+      setCheckedEquipment((prevState) =>
+        prevState.filter((item) => item !== name)
+      );
+    }
+  };
+
+  const changeLocalTransmission = (event) => {
+    const { name, checked } = event.target;
+
+    checked ? setTransmission(name) : setTransmission('');
   };
 
   const changeLocationFilter = (event) =>
@@ -40,19 +49,15 @@ export const Aside = () => {
 
   const applyFilters = () => {
     dispatch(updateVanType(carType));
-    dispatch(updateEquipment(equipment));
+    dispatch(updateEquipment(checkedEquipment));
     dispatch(hideButton());
+    dispatch(changeTransmission(transmission));
   };
 
   const handleResetFilters = () => {
     setCarType('');
-    setEquipment({
-      airConditioner: false,
-      transmission: false,
-      kitchen: false,
-      TV: false,
-      showerToilet: false,
-    });
+    setTransmission('');
+    setCheckedEquipment([]);
     dispatch(resetFilters());
     dispatch(showButton());
   };
@@ -82,7 +87,7 @@ export const Aside = () => {
             <input
               type="checkbox"
               name="airConditioner"
-              checked={equipment['airConditioner']}
+              checked={checkedEquipment.includes('airConditioner')}
               onChange={changeEquipmentFilter}
             />
             <span>AC</span>
@@ -92,8 +97,8 @@ export const Aside = () => {
             <input
               type="checkbox"
               name="automatic"
-              checked={equipment['automatic']}
-              onChange={changeEquipmentFilter}
+              checked={transmission === 'automatic'}
+              onChange={changeLocalTransmission}
             />
             <span>Automatic</span>
           </label>
@@ -102,7 +107,7 @@ export const Aside = () => {
             <input
               type="checkbox"
               name="kitchen"
-              checked={equipment['kitchen']}
+              checked={checkedEquipment.includes('kitchen')}
               onChange={changeEquipmentFilter}
             />
             <span>Kitchen</span>
@@ -112,7 +117,7 @@ export const Aside = () => {
             <input
               type="checkbox"
               name="TV"
-              checked={equipment['TV']}
+              checked={checkedEquipment.includes('TV')}
               onChange={changeEquipmentFilter}
             />
             <span>TV</span>
@@ -122,7 +127,7 @@ export const Aside = () => {
             <input
               type="checkbox"
               name="showerToilet"
-              checked={equipment['showerToilet']}
+              checked={checkedEquipment.includes('showerToilet')}
               onChange={changeEquipmentFilter}
             />
             <span>Shower/WC</span>
