@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { CommonIcon } from '../CommonIcon/CommonIcon';
 
 export const AsideWrapper = styled.div`
   flex-shrink: 0;
@@ -40,13 +39,8 @@ export const LocationInput = styled.input`
     color: ${(p) => p.theme.colors.inputsText};
   }
 
-  &:focus,
-  &:focus-within {
+  &:focus {
     border: 1px solid ${(p) => p.theme.colors.redColor};
-
-    & + ${CommonIcon} {
-      fill: ${(p) => p.theme.colors.textTitleColor};
-    }
   }
 `;
 

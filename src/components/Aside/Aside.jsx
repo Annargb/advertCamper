@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectLocationFilter } from '../../redux/selectors';
 import {
@@ -18,6 +18,10 @@ export const Aside = () => {
   const [transmission, setTransmission] = useState('');
   const [carType, setCarType] = useState('');
   const [checkedEquipment, setCheckedEquipment] = useState([]);
+
+  useEffect(() => {
+    setCarType('');
+  }, []);
 
   const changeEquipmentFilter = (event) => {
     const { value, checked } = event.target;
