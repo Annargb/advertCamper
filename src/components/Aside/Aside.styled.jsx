@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { CiLocationOn } from 'react-icons/ci';
+import { CommonIcon } from '../CommonIcon/CommonIcon';
 
 export const AsideWrapper = styled.div`
   flex-shrink: 0;
@@ -40,23 +40,18 @@ export const LocationInput = styled.input`
     color: ${(p) => p.theme.colors.inputsText};
   }
 
-  &:focus {
+  &:focus,
+  &:focus-within {
     border: 1px solid ${(p) => p.theme.colors.redColor};
+
+    & + ${CommonIcon} {
+      fill: ${(p) => p.theme.colors.textTitleColor};
+    }
   }
 `;
 
 export const LocationFilterWrapper = styled.div`
   position: relative;
-`;
-
-export const FilterIcon = styled(CiLocationOn)`
-  position: absolute;
-  top: 50%;
-  left: 18px;
-  transform: translateY(-50%);
-  width: 18px;
-  height: 20px;
-  fill: ${(p) => p.theme.colors.textTitleColor};
 `;
 
 export const FilterLabel = styled.p`
@@ -78,13 +73,22 @@ export const FilterTypeTitle = styled.h3`
 `;
 
 export const TypeForm = styled.form`
-  margin-bottom: 64px;
+  margin-bottom: 32px;
 `;
 
 export const RadioWrapper = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
+`;
+
+export const CheckboxWrapper = styled.div`
+  max-width: 360px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 10px;
+  row-gap: 8px;
 `;
 
 export const CustomRadio = styled.label`
@@ -110,12 +114,37 @@ export const CustomRadio = styled.label`
   }
 `;
 
-export const RadioInput = styled.input`
+export const CustomCheckbox = styled.label`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid;
+  border-radius: 10px;
+  /* max-width: 128px;
+  min-height: 100px;
+  padding: 9.5px 24px; */
+
+  padding: 17px 40px;
+  width: 112px;
+  height: 95px;
+
+  border-color: ${(p) =>
+    p.checked ? p.theme.colors.redColor : p.theme.colors.cardBorder};
+  transition: border-color 250ms ${(p) => p.theme.transition};
+
+  &:hover,
+  &:focus {
+    border-color: ${(p) => p.theme.colors.redColor};
+  }
+`;
+
+export const CustomInput = styled.input`
   opacity: 0;
   position: absolute;
 `;
 
-export const RadioText = styled.span`
+export const CustomInputText = styled.span`
   font-weight: 500;
   font-size: 16px;
   line-height: 1.25;

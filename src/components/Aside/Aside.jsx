@@ -1,9 +1,6 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import {
-  selectLocationFilter,
-  selectCheckedEquipment,
-} from '../../redux/selectors';
+import { selectLocationFilter } from '../../redux/selectors';
 import {
   updateLocationFilter,
   updateVanType,
@@ -13,15 +10,14 @@ import {
 } from '../../redux/filterSlice';
 import { showButton, hideButton } from '../../redux/catalogSlice';
 import * as c from './Aside.styled';
-import icons from '../../images/icons.svg';
+import { CommonIcon } from '../CommonIcon/CommonIcon';
 
 export const Aside = () => {
   const locationFilter = useSelector(selectLocationFilter);
   const dispatch = useDispatch();
   const [transmission, setTransmission] = useState('');
   const [carType, setCarType] = useState('');
-  const equipmentFromState = useSelector(selectCheckedEquipment);
-  const [checkedEquipment, setCheckedEquipment] = useState(equipmentFromState);
+  const [checkedEquipment, setCheckedEquipment] = useState([]);
 
   const changeEquipmentFilter = (event) => {
     const { value, checked } = event.target;
@@ -40,8 +36,12 @@ export const Aside = () => {
     checked ? setTransmission(value) : setTransmission('');
   };
 
-  const changeLocationFilter = (event) =>
+  const changeLocationFilter = (event) => {
     dispatch(updateLocationFilter(event.target.value.trim()));
+    event.target.value.trim() === ''
+      ? dispatch(showButton())
+      : dispatch(hideButton());
+  };
 
   const changeCarType = (event) => {
     setCarType(event.target.value);
@@ -74,71 +74,82 @@ export const Aside = () => {
             value={locationFilter}
             onChange={changeLocationFilter}
           ></c.LocationInput>
-          <c.FilterIcon />
+          <CommonIcon
+            name="icon-map-pin"
+            position="absolute"
+            width="18px"
+            height="20px"
+            top="50%"
+            left="18px"
+            transform="translateY(-50%)"
+            fill="rgba(16, 24, 40, 0.6)"
+          />
         </c.LocationFilterWrapper>
       </c.LocationField>
 
       <c.FilterLabel>Filters</c.FilterLabel>
 
-      <form id="equipmentForm">
+      <c.TypeForm id="equipmentForm">
         <c.FilterTypeTitle>Vehicle equipment</c.FilterTypeTitle>
-        <div>
-          <label>
-            <input
+        <c.CheckboxWrapper>
+          <c.CustomCheckbox
+            checked={checkedEquipment.includes('airConditioner')}
+          >
+            <c.CustomInput
               type="checkbox"
               name="equipment"
               value="airConditioner"
-              checked={checkedEquipment.includes('airConditioner')}
               onChange={changeEquipmentFilter}
             />
-            <span>AC</span>
-          </label>
+            <CommonIcon name="icon-ac" size="32px" marginB="8px" />
+            <c.CustomInputText>AC</c.CustomInputText>
+          </c.CustomCheckbox>
 
-          <label>
-            <input
+          <c.CustomCheckbox checked={transmission === 'automatic'}>
+            <c.CustomInput
               type="checkbox"
               name="equipment"
               value="automatic"
-              checked={transmission === 'automatic'}
               onChange={changeLocalTransmission}
             />
-            <span>Automatic</span>
-          </label>
+            <CommonIcon name="icon-automatic" size="32px" marginB="8px" />
+            <c.CustomInputText>Automatic</c.CustomInputText>
+          </c.CustomCheckbox>
 
-          <label>
-            <input
+          <c.CustomCheckbox checked={checkedEquipment.includes('kitchen')}>
+            <c.CustomInput
               type="checkbox"
               name="equipment"
               value="kitchen"
-              checked={checkedEquipment.includes('kitchen')}
               onChange={changeEquipmentFilter}
             />
-            <span>Kitchen</span>
-          </label>
+            <CommonIcon name="icon-kitchen" size="32px" marginB="8px" />
+            <c.CustomInputText>Kitchen</c.CustomInputText>
+          </c.CustomCheckbox>
 
-          <label>
-            <input
+          <c.CustomCheckbox checked={checkedEquipment.includes('TV')}>
+            <c.CustomInput
               type="checkbox"
               name="equipment"
               value="TV"
-              checked={checkedEquipment.includes('TV')}
               onChange={changeEquipmentFilter}
             />
-            <span>TV</span>
-          </label>
+            <CommonIcon name="icon-tv" size="32px" marginB="8px" />
+            <c.CustomInputText>TV</c.CustomInputText>
+          </c.CustomCheckbox>
 
-          <label>
-            <input
+          <c.CustomCheckbox checked={checkedEquipment.includes('showerToilet')}>
+            <c.CustomInput
               type="checkbox"
               name="equipment"
               value="showerToilet"
-              checked={checkedEquipment.includes('showerToilet')}
               onChange={changeEquipmentFilter}
             />
-            <span>Shower/WC</span>
-          </label>
-        </div>
-      </form>
+            <CommonIcon name="icon-shower" size="32px" marginB="8px" />
+            <c.CustomInputText>Shower/WC</c.CustomInputText>
+          </c.CustomCheckbox>
+        </c.CheckboxWrapper>
+      </c.TypeForm>
 
       <c.TypeForm id="typeVansForm">
         <c.FilterTypeTitle>Vehicle type</c.FilterTypeTitle>
@@ -147,43 +158,52 @@ export const Aside = () => {
             checked={carType === 'panelTruck'}
             style={{ padding: '19px 30px' }}
           >
-            <c.RadioInput
+            <c.CustomInput
               type="radio"
               name="camperType"
               value="panelTruck"
               onChange={changeCarType}
             />{' '}
-            <c.RadioIcon>
-              <use href={`${icons}#icon-camper3`} />
-            </c.RadioIcon>
-            <c.RadioText>Van</c.RadioText>
+            <CommonIcon
+              name="icon-camper3"
+              width="40px"
+              height="28px"
+              marginB="8px"
+            />
+            <c.CustomInputText>Van</c.CustomInputText>
           </c.CustomRadio>
           <c.CustomRadio checked={carType === 'fullyIntegrated'}>
-            <c.RadioInput
+            <c.CustomInput
               type="radio"
               name="camperType"
               value="fullyIntegrated"
               onChange={changeCarType}
             />{' '}
-            <c.RadioIcon>
-              <use href={`${icons}#icon-camper2`} />
-            </c.RadioIcon>
-            <c.RadioText>Fully Integrated</c.RadioText>
+            <CommonIcon
+              name="icon-camper2"
+              width="40px"
+              height="28px"
+              marginB="8px"
+            />
+            <c.CustomInputText>Fully Integrated</c.CustomInputText>
           </c.CustomRadio>
           <c.CustomRadio
             checked={carType === 'alcove'}
             style={{ padding: '19px 30px' }}
           >
-            <c.RadioInput
+            <c.CustomInput
               type="radio"
               name="camperType"
               value="alcove"
               onChange={changeCarType}
             />{' '}
-            <c.RadioIcon>
-              <use href={`${icons}#icon-camper1`} />
-            </c.RadioIcon>
-            <c.RadioText>Alcove</c.RadioText>
+            <CommonIcon
+              name="icon-camper1"
+              width="40px"
+              height="28px"
+              marginB="8px"
+            />
+            <c.CustomInputText>Alcove</c.CustomInputText>
           </c.CustomRadio>
         </c.RadioWrapper>
       </c.TypeForm>

@@ -9,7 +9,7 @@ import {
   selectFilteredCampers,
   selectVisibleButton,
 } from '../../redux/selectors';
-import { updateCurrentPage } from '../../redux/catalogSlice';
+import { showButton, updateCurrentPage } from '../../redux/catalogSlice';
 import { resetFilters } from '../../redux/filterSlice';
 import * as c from './CatalogPage.styled';
 import { Aside } from '../../components/Aside/Aside';
@@ -26,6 +26,7 @@ const CatalogPage = () => {
   useEffect(() => {
     dispatch(fetchCatalog(currentPage));
     dispatch(resetFilters());
+    dispatch(showButton());
   }, [dispatch, currentPage]);
 
   return (

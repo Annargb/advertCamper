@@ -30,12 +30,14 @@ export const CamperDetails = ({ camper }) => {
         <IoBedOutline style={{ width: '20', height: '20' }} />
         <c.DetailsText>{`${camper.details.beds} beds`}</c.DetailsText>
       </c.DetailsItems>
-      <c.DetailsItems>
-        <c.DetailsIcon>
-          <use href={`${icons}#icon-ac`} />
-        </c.DetailsIcon>
-        <c.DetailsText>AC</c.DetailsText>
-      </c.DetailsItems>
+      {camper.details.airConditioner !== 0 && (
+        <c.DetailsItems>
+          <c.DetailsIcon>
+            <use href={`${icons}#icon-ac`} />
+          </c.DetailsIcon>
+          <c.DetailsText>AC</c.DetailsText>
+        </c.DetailsItems>
+      )}
     </c.DetailsList>
   );
 };
