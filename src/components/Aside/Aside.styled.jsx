@@ -92,15 +92,20 @@ export const CustomRadio = styled.label`
   cursor: pointer;
   border: 1px solid;
   border-radius: 10px;
+
   max-width: 128px;
-  min-height: 100px;
+  height: 100px;
   padding: 9.5px 24px;
 
   border-color: ${(p) =>
+    p.checked ? p.theme.colors.redColor : p.theme.colors.cardBorder};
+  transition: border-color 250ms ${(p) => p.theme.transition};
+
+  /* border-color: ${(p) =>
     p.checked
       ? (p) => p.theme.colors.redColor
       : (p) => p.theme.colors.cardBorder};
-  transition: border-color 250ms ${(p) => p.theme.transition};
+  transition: border-color 250ms ${(p) => p.theme.transition}; */
 
   &:hover,
   &:focus {

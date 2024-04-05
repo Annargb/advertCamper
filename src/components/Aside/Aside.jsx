@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectLocationFilter } from '../../redux/selectors';
 import {
@@ -18,10 +18,6 @@ export const Aside = () => {
   const [transmission, setTransmission] = useState('');
   const [carType, setCarType] = useState('');
   const [checkedEquipment, setCheckedEquipment] = useState([]);
-
-  useEffect(() => {
-    setCarType('');
-  }, []);
 
   const changeEquipmentFilter = (event) => {
     const { value, checked } = event.target;
@@ -96,7 +92,8 @@ export const Aside = () => {
       <c.TypeForm id="equipmentForm">
         <c.FilterTypeTitle>Vehicle equipment</c.FilterTypeTitle>
         <c.CheckboxWrapper>
-          <c.CustomCheckbox
+          <c.CustomRadio
+            style={{ padding: '17px 0', width: '112px', height: '95px' }}
             checked={checkedEquipment.includes('airConditioner')}
           >
             <c.CustomInput
@@ -107,9 +104,12 @@ export const Aside = () => {
             />
             <CommonIcon name="icon-ac" size="32px" marginB="8px" />
             <c.CustomInputText>AC</c.CustomInputText>
-          </c.CustomCheckbox>
+          </c.CustomRadio>
 
-          <c.CustomCheckbox checked={transmission === 'automatic'}>
+          <c.CustomRadio
+            style={{ padding: '17px 0', width: '112px', height: '95px' }}
+            checked={transmission === 'automatic'}
+          >
             <c.CustomInput
               type="checkbox"
               name="equipment"
@@ -118,9 +118,12 @@ export const Aside = () => {
             />
             <CommonIcon name="icon-automatic" size="32px" marginB="8px" />
             <c.CustomInputText>Automatic</c.CustomInputText>
-          </c.CustomCheckbox>
+          </c.CustomRadio>
 
-          <c.CustomCheckbox checked={checkedEquipment.includes('kitchen')}>
+          <c.CustomRadio
+            style={{ padding: '17px 0', width: '112px', height: '95px' }}
+            checked={checkedEquipment.includes('kitchen')}
+          >
             <c.CustomInput
               type="checkbox"
               name="equipment"
@@ -129,9 +132,12 @@ export const Aside = () => {
             />
             <CommonIcon name="icon-kitchen" size="32px" marginB="8px" />
             <c.CustomInputText>Kitchen</c.CustomInputText>
-          </c.CustomCheckbox>
+          </c.CustomRadio>
 
-          <c.CustomCheckbox checked={checkedEquipment.includes('TV')}>
+          <c.CustomRadio
+            style={{ padding: '17px 0', width: '112px', height: '95px' }}
+            checked={checkedEquipment.includes('TV')}
+          >
             <c.CustomInput
               type="checkbox"
               name="equipment"
@@ -140,9 +146,12 @@ export const Aside = () => {
             />
             <CommonIcon name="icon-tv" size="32px" marginB="8px" />
             <c.CustomInputText>TV</c.CustomInputText>
-          </c.CustomCheckbox>
+          </c.CustomRadio>
 
-          <c.CustomCheckbox checked={checkedEquipment.includes('showerToilet')}>
+          <c.CustomRadio
+            style={{ padding: '17px 0', width: '112px', height: '95px' }}
+            checked={checkedEquipment.includes('showerToilet')}
+          >
             <c.CustomInput
               type="checkbox"
               name="equipment"
@@ -151,7 +160,7 @@ export const Aside = () => {
             />
             <CommonIcon name="icon-shower" size="32px" marginB="8px" />
             <c.CustomInputText>Shower/WC</c.CustomInputText>
-          </c.CustomCheckbox>
+          </c.CustomRadio>
         </c.CheckboxWrapper>
       </c.TypeForm>
 
