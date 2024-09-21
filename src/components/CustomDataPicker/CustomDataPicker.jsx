@@ -7,12 +7,6 @@ import 'react-datepicker/dist/react-datepicker-cssmodules.css';
 export const CustomDataPicker = () => {
   const [selectedDate, setSelectedDate] = useState(Date.now());
 
-  //   const CustomInput = () => {
-  //     return <c.Field aria-label="calendar"></c.Field>;
-  //   };
-
-  //   CustomInput.displayName = 'CustomInput';
-
   return (
     <>
       <DatePicker
@@ -21,7 +15,6 @@ export const CustomDataPicker = () => {
         onChange={(date) => {
           setSelectedDate(date);
         }}
-        // customInput={<CustomInput />}
         dateFormat={'dd.MM.yyyy'}
         calendarStartDay={1}
         formatWeekDay={(day) => day.substr(0, 3)}

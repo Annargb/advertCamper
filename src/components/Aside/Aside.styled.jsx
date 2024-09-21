@@ -101,12 +101,6 @@ export const CustomRadio = styled.label`
     p.checked ? p.theme.colors.redColor : p.theme.colors.cardBorder};
   transition: border-color 250ms ${(p) => p.theme.transition};
 
-  /* border-color: ${(p) =>
-    p.checked
-      ? (p) => p.theme.colors.redColor
-      : (p) => p.theme.colors.cardBorder};
-  transition: border-color 250ms ${(p) => p.theme.transition}; */
-
   &:hover,
   &:focus {
     border-color: ${(p) => p.theme.colors.redColor};
@@ -120,10 +114,6 @@ export const CustomCheckbox = styled.label`
   cursor: pointer;
   border: 1px solid;
   border-radius: 10px;
-  /* max-width: 128px;
-  min-height: 100px;
-  padding: 9.5px 24px; */
-
   padding: 17px 40px;
   width: 112px;
   height: 95px;

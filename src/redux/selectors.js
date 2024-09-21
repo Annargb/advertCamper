@@ -38,13 +38,6 @@ export const selectFilteredCampers = createSelector(
         (transmission === 'automatic' &&
           camper.transmission.toLowerCase() === 'automatic');
 
-      // const transmissionMatch =
-      //   checkedEquipment.includes('automatic') &&
-      //   camper.transmission.toLowerCase() === 'automatic';
-
-      // return (
-      //   locationMatch && vanTypeMatch && equipmentMatch
-
       return (
         locationMatch && vanTypeMatch && equipmentMatch && transmissionMatch
       );
